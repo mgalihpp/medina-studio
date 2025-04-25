@@ -51,7 +51,7 @@ export function Blog() {
               to="/blog"
               className="hidden sm:flex items-center gap-2 px-6 py-3 bg-main-color text-white rounded-full hover:bg-secondary-color/90 transition-colors duration-300"
             >
-              <span>View All</span>
+              <span>Lihat Semua</span>
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
@@ -94,7 +94,7 @@ export function Blog() {
                     to={`/blog/${post.slug}`}
                     className="inline-flex items-center gap-2 px-6 py-2 bg-main-color text-white rounded-full hover:bg-secondary-color transition-colors duration-300"
                   >
-                    <span>Readmore</span>
+                    <span>Read more</span>
                     <ArrowUpRight className="h-4 w-4" />
                   </Link>
                 </div>

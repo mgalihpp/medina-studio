@@ -1,8 +1,8 @@
-import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Textarea } from '~/components/ui/textarea';
 import { Card, CardContent } from '~/components/ui/card';
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
+import { RippleButton } from '~/components/ripple-button';
 
 export function Contact() {
   return (
@@ -254,12 +254,9 @@ export function Contact() {
                       />
                     </div>
 
-                    <Button
-                      type="submit"
-                      className="w-full bg-main-color hover:bg-secondary-color/90 text-white"
-                    >
+                    <RippleButton className="w-full py-2">
                       Kirim pesan
-                    </Button>
+                    </RippleButton>
                   </form>
                 </CardContent>
               </Card>

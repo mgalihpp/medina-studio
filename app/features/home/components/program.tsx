@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Users, CalendarDays, ChevronRight } from 'lucide-react';
 import { CourseCard } from './card/course-card';
+import { RippleButton } from '~/components/ripple-button';
 
 const CourseTab = ({ active, title, onClick }: CourseTabProps) => (
   <button
@@ -175,7 +176,7 @@ export function Program() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="space-y-6"
               >
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 leading-relaxed">
                   {activeCourse.description}
                 </p>
 
@@ -234,9 +235,7 @@ export function Program() {
                 </div>
 
                 <div className="pt-4">
-                  <button className="px-8 py-3 bg-secondary-color text-white rounded-md hover:bg-secondary-color/90 transition-colors duration-300 shadow-md">
-                    Daftar Sekarang
-                  </button>
+                  <RippleButton>Daftar Sekarang</RippleButton>
                 </div>
               </motion.div>
             </div>

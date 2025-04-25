@@ -1,6 +1,11 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { useLocation } from 'react-router';
 
 export function TopBar() {
+  const { pathname } = useLocation();
+
+  if (pathname !== '/') return null;
+
   return (
     <div className="max-md:hidden w-full bg-main-light text-primary md:px-8 lg:px-16 py-2 flex justify-between items-center text-sm">
       <div className="flex items-center gap-4">

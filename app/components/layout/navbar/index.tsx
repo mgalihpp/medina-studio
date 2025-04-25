@@ -116,9 +116,9 @@ export function Navbar() {
 
           {/* Mobile navigation */}
           <div
-            className={`absolute top-[60px] left-0 right-0 bg-white shadow-md z-50 md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+            className={`absolute  left-0 right-0 bg-white shadow-md z-50 md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
               isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
-            }`}
+            } ${isScrolling ? 'top-[60px]' : 'top-[92px]'}`}
           >
             <div className="flex flex-col p-4">
               {navigation.map((item) => (

@@ -65,6 +65,7 @@
 // }
 
 import { motion } from 'framer-motion';
+import { RippleButton } from '~/components/ripple-button';
 
 export function AboutUs() {
   return (
@@ -73,6 +74,11 @@ export function AboutUs() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="section-subtitle">Tentang Kami</h2>
+            <h3 className="section-title">Medina Studio</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Kursus Tata Rias dan Busana Berkualitas dan Terjangkau di
+              Tangerang
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-x-hidden">
@@ -88,7 +94,7 @@ export function AboutUs() {
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kanvas.jpg-mBBsVjcruNF4c12MttQcXc3YV3Fqt9.jpeg"
                   alt="Medina Studio - Kursus Tata Rias"
-                  className="object-cover h-auto w-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  className="object-cover h-auto w-full transition-transform duration-300 ease-in-out group-hover:scale-105 rounded-lg"
                   loading="lazy"
                   decoding="async"
                 />
@@ -101,16 +107,18 @@ export function AboutUs() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="space-y-6"
+              className="space-y-6 p-4"
             >
-              <h3 className="section-title">Medina Studio</h3>
               <p className="text-gray-700 leading-relaxed text-lg">
-                Medina Studio adalah tempat kursus tata rias dan busana
-                profesional yang telah berdiri sejak tahun 2017. Kami
-                berkomitmen untuk memberikan pendidikan terbaik dalam bidang
-                tata rias dan busana dengan pendekatan yang komprehensif dan
-                personal.
+                Berdiri sejak tahun 2017 sebelum rebranding pada akhir 2024,
+                Medina Studio Tata Rias dan Busana menyediakan berbagai
+                pendidikan dan pelatihan komprehensif di bidang tata rias
+                pengantin dan busana. Dengan sederet keunggulan dan harga yang
+                terjangkau, jadikan Medina Studio sebagai institut pendidikan
+                pilihan anda para make up artist dan fashion designer masa
+                depan!
               </p>
+              <RippleButton>Lebih lanjut</RippleButton>
             </motion.div>
           </div>
         </div>

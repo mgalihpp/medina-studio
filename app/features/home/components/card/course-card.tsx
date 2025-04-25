@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Clock } from 'lucide-react';
+import { RippleButton } from '~/components/ripple-button';
 
 export function CourseCard({ activeCourse }: { activeCourse: courses }) {
   return (
@@ -33,9 +34,9 @@ export function CourseCard({ activeCourse }: { activeCourse: courses }) {
                 <Clock className="w-4 h-4 mr-2 text-secondary-color" />
                 <span>{course.duration}</span>
               </div>
-              <button className="w-full py-2 bg-secondary-color text-white rounded hover:bg-secondary-color/90 transition-colors duration-300">
+              <RippleButton className="w-full py-2">
                 Detail Program
-              </button>
+              </RippleButton>
             </div>
           </motion.div>
         ))}
