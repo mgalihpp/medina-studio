@@ -75,7 +75,7 @@ export function AboutUs() {
             <h2 className="section-subtitle">Tentang Kami</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-x-hidden">
             {/* Gambar kiri: animasi saat scroll */}
             <motion.div
               initial={{ x: -100, opacity: 0 }}
