@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/news" className="hover:underline">
-                  Berita & Acara
+                  Berita & Blog
                 </Link>
               </li>
             </ul>

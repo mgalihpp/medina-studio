@@ -24,7 +24,7 @@ body {
   }
 
   .section-subtitle {
-    @apply text-sm uppercase tracking-wider text-main-color font-medium mb-3;
+    @apply text-sm uppercase tracking-wider text-secondary-color font-medium mb-3;
   }
 }
 

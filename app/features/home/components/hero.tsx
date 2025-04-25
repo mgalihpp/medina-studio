@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router';
 
 interface CarouselItem {
   id: number;
@@ -13,27 +14,30 @@ interface CarouselItem {
 const carouselItems: CarouselItem[] = [
   {
     id: 1,
-    image: '/placeholder.svg?height=600&width=1200',
-    title: 'Welcome to Anata',
-    description: 'Experience premium beauty treatments tailored just for you',
-    buttonText: 'Book Now',
-    buttonLink: '/booking',
+    image:
+      'https://cdn0-production-images-kly.akamaized.net/jRcvvUgZ7fFkb1N0oJrC8ZBf_Vo=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5001579/original/003005800_1731383526-fungsi-tata-rias-dalam-seni-tari-adalah.jpg',
+    title: 'Selamat Datang di Medina Group',
+    description:
+      'Kami adalah perusahaan yang bergerak di bidang kecantikan dan kesehatan',
+    buttonText: 'Lebih lanjut',
+    buttonLink: '/tentang-kami/#aboutus',
   },
   {
     id: 2,
-    image: '/placeholder.svg?height=600&width=1200',
-    title: 'Special Treatments',
-    description: 'Discover our range of specialized beauty treatments',
-    buttonText: 'View Services',
+    image:
+      'https://highlight.id/wp-content/uploads/2020/01/sekolah-lembaga-akademi-pendidikan-program-kursus-kecantikan-beauty-school-indonesia_22-640x384.jpg',
+    title: 'Program Kursus',
+    description: 'Ikuti program kursus kecantikan dan kesehatan kami',
+    buttonText: 'Liat Program',
     buttonLink: '/services',
   },
   {
     id: 3,
     image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhfM7sibCfoqOHUJNp_JnyqkIEKuzlJIhOMg&s',
-    title: 'New Promotions',
-    description: 'Check out our latest offers and promotions',
-    buttonText: 'See Offers',
+      'https://foto.kontan.co.id/7HlJw0gJYjj2Lm6r_v5wwyRg5lw=/smart/2022/01/13/950070032p.jpg',
+    title: 'Promo Terbaru',
+    description: 'Liat tawaran dan promo terbaru kami',
+    buttonText: 'Lihat tawaran',
     buttonLink: '/promotions',
   },
 ];
@@ -121,16 +125,22 @@ export function Hero() {
                 >
                   {item.description}
                 </p>
-                <a
-                  href={item.buttonLink}
-                  className={`inline-block bg-white text-gray-800 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-all duration-300 transform ${
+                <Link
+                  to={item.buttonLink}
+                  className={`group relative inline-flex items-center border border-white text-white bg-transparent px-6 py-3 rounded-full font-medium hover:bg-white hover:text-primary transition-all duration-200 transform ease-in-out ${
                     index === currentSlide
                       ? 'translate-y-0 opacity-100 delay-300'
                       : 'translate-y-10 opacity-0'
                   }`}
                 >
-                  {item.buttonText}
-                </a>
+                  {/* TEXT */}
+                  <span className="transition-all duration-200 group-hover:mr-4 ease-in-out">
+                    {item.buttonText}
+                  </span>
+
+                  {/* ICON */}
+                  <ChevronRight className="w-0 overflow-hidden group-hover:w-6 group-hover:opacity-100 translate-x-[-8px] group-hover:translate-x-0 transition-all duration-200 ease-in-out" />
+                </Link>
               </div>
             </div>
           </div>

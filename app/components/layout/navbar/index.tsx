@@ -48,7 +48,7 @@ export function Navbar() {
       >
         {/* Main navigation */}
         <nav
-          className={`px-4 sm:px-16 ${
+          className={`max-w-7xl mx-auto w-full px-4 sm:px-16 ${
             isScrolling ? 'py-0' : 'py-4'
           } flex justify-between items-center`}
         >

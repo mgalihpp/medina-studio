@@ -41,7 +41,7 @@ export function Blog() {
           {/* Header */}
           <div className="flex justify-between items-end mb-10">
             <div>
-              <p className="text-sm text-gray-500 mb-2">Berita & Blog</p>
+              <p className="section-subtitle">Berita & Blog</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-gray-900">
                 <span className="text-main-color">Berita & Blog</span> Terbaru
                 Kami

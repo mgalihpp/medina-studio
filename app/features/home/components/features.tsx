@@ -2,6 +2,20 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import { Award, BookOpen, School, GraduationCap } from 'lucide-react';
 import { useRef, useEffect, useState } from 'react';
 
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
+
 export function Features() {
   const features = [
     {
@@ -33,14 +47,24 @@ export function Features() {
   return (
     <section id="features" className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="section-subtitle">KEUNGGULAN KAMI</h2>
-          <h3 className="section-title">Mengapa Memilih Medina Studio?</h3>
-          <p className="text-gray-600 mt-4">
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.h2 className="section-subtitle" variants={childVariants}>
+            KEUNGGULAN KAMI
+          </motion.h2>
+          <motion.h3 className="section-title" variants={childVariants}>
+            Mengapa Memilih Medina Studio?
+          </motion.h3>
+          <motion.p className="text-gray-600 mt-4" variants={childVariants}>
             Kami memiliki berbagai keunggulan yang membuat Medina Studio menjadi
             tempat terbaik untuk belajar tata rias dan busana.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
