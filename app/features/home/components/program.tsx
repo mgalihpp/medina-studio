@@ -109,7 +109,7 @@ export function Program() {
   const activeCourse = courseTypes.find((course) => course.id === activeTab);
 
   return (
-    <section className="py-16 bg-white">
+    <section id="program" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

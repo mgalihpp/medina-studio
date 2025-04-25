@@ -2,7 +2,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '~/components/ui/card';
 
 export function VisiDanMisi() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-6xl">
+    <section id="visi" className="container mx-auto px-4 py-16 max-w-6xl">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
         <div className="relative overflow-hidden rounded-lg h-full">
           <img
@@ -45,6 +45,6 @@ export function VisiDanMisi() {
           </Card>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

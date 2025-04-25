@@ -81,7 +81,10 @@ export function Hero() {
   }, [nextSlide]);
 
   return (
-    <div className="relative w-full h-[500px] md:h-[calc(100dvh-132px)] overflow-hidden">
+    <section
+      id="hero"
+      className="relative w-full h-[500px] md:h-[calc(100dvh-132px)] overflow-hidden"
+    >
       {/* Carousel slides */}
       <div className="relative w-full h-full">
         {carouselItems.map((item, index) => (
@@ -176,6 +179,6 @@ export function Hero() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

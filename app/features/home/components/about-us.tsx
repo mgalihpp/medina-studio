@@ -69,7 +69,7 @@ import { RippleButton } from '~/components/ripple-button';
 
 export function AboutUs() {
   return (
-    <section className="py-16 bg-white">
+    <section id="tentang-kami" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -118,7 +118,9 @@ export function AboutUs() {
                 pilihan anda para make up artist dan fashion designer masa
                 depan!
               </p>
-              <RippleButton>Lebih lanjut</RippleButton>
+              <RippleButton asLink href="/tentang-kami">
+                Lebih lanjut
+              </RippleButton>
             </motion.div>
           </div>
         </div>

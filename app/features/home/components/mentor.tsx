@@ -23,7 +23,7 @@ const mentors = [
 export function Mentor() {
   return (
     <section
-      id="mentors"
+      id="mentor"
       className="py-24 bg-gradient-to-b from-white to-main-light"
     >
       <div className="container mx-auto px-4">

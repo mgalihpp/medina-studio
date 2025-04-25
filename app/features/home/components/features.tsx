@@ -45,7 +45,7 @@ export function Features() {
   ];
 
   return (
-    <section id="features" className="bg-white py-16 md:py-24">
+    <section id="keunggulan" className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           className="text-center max-w-3xl mx-auto mb-12"

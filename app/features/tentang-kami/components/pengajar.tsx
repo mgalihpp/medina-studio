@@ -31,7 +31,7 @@ export function Pengajar() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16 max-w-6xl">
+    <section id="pengajar" className="container mx-auto px-4 py-16 max-w-6xl">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:pr-8 flex justify-center flex-col">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -90,6 +90,6 @@ export function Pengajar() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

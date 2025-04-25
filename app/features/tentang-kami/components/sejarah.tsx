@@ -1,6 +1,6 @@
 export function Sejarah() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-6xl">
+    <section id="sejarah" className="container mx-auto px-4 py-16 max-w-6xl">
       <div className="text-center">
         <p className="section-subtitle">Tentang Kami</p>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
@@ -41,6 +41,6 @@ export function Sejarah() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
