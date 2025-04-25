@@ -14,11 +14,11 @@ export function TopBar() {
           +62 812-3456-7890
         </div>
         <a
-          href="mailto:info@salonanata.com"
+          href="mailto:info@medinastudio.com"
           className="flex items-center gap-1 text-xs"
         >
           <Mail className="size-3" />
-          info@salonanata.com
+          info@medinastudio.com
         </a>
         <div className="flex items-center gap-1 text-xs">
           <MapPin className="size-3" />

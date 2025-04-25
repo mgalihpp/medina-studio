@@ -37,8 +37,8 @@ export function Contact() {
                           <Phone />
                         </div>
                         <div>
-                          <p className="font-medium">Phone</p>
-                          <p className="text-white/80">(123) 456-7890</p>
+                          <p className="font-medium">Nomor Telepon</p>
+                          <p className="text-white/80">+62 812-3456-7890</p>
                         </div>
                       </div>
 
@@ -48,7 +48,7 @@ export function Contact() {
                         </div>
                         <div>
                           <p className="font-medium">Email</p>
-                          <p className="text-white/80">info@medinabeauty.com</p>
+                          <p className="text-white/80">info@medinastudio.com</p>
                         </div>
                       </div>
 
@@ -57,9 +57,11 @@ export function Contact() {
                           <MapPin />
                         </div>
                         <div>
-                          <p className="font-medium">Location</p>
+                          <p className="font-medium">Lokasi</p>
                           <p className="text-white/80">
-                            123 Beauty Street, Salon City, SC 12345
+                            Graha Gardenia I Blok XG06/14 Citra Raya, Jalan
+                            Gardenia Raya RT 002 RW 001, Mekarbakti, Panongan,
+                            Tangerang 15710 Banten
                           </p>
                         </div>
                       </div>
@@ -69,17 +71,15 @@ export function Contact() {
                           <Clock />
                         </div>
                         <div>
-                          <p className="font-medium">Hours</p>
-                          <p className="text-white/80">
-                            Mon-Sat: 9:00 AM - 7:00 PM
-                          </p>
-                          <p className="text-white/80">Sunday: Closed</p>
+                          <p className="font-medium">Jam Operasional</p>
+                          <p className="text-white/80">Sen-Sab: 9:00 - 19:00</p>
+                          <p className="text-white/80">Min: Tutup</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="mt-8">
-                      <h4 className="font-medium mb-3">Follow Us</h4>
+                      <h4 className="font-medium mb-3">Ikuti kami</h4>
                       <div className="flex gap-4">
                         <a
                           href="#"
