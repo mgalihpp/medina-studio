@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
 import { Clock } from 'lucide-react';
+import { Link } from 'react-router';
 import { RippleButton } from '~/components/ripple-button';
 
 export function CourseCard({ activeCourse }: { activeCourse: courses }) {
+  const linkToDetailProgram = `${activeCourse.title
+    .toLowerCase()
+    .replace(/\s+/g, '-')}`;
+
   return (
     <div>
       <h3 className="section-title text-center mb-12">
@@ -34,9 +39,15 @@ export function CourseCard({ activeCourse }: { activeCourse: courses }) {
                 <Clock className="w-4 h-4 mr-2 text-secondary-color" />
                 <span>{course.duration}</span>
               </div>
-              <RippleButton className="w-full py-2">
-                Detail Program
-              </RippleButton>
+              <Link
+                to={`${linkToDetailProgram}/${course.title
+                  .toLowerCase()
+                  .replace(/\s+/g, '-')}`}
+              >
+                <RippleButton className="w-full py-2">
+                  Detail Program
+                </RippleButton>
+              </Link>
             </div>
           </motion.div>
         ))}

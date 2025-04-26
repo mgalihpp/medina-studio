@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <div className="relative overflow-hidden w-24 h-24 rounded-full mb-4">
               <img
-                src="logo.png"
+                src="/logo.png"
                 alt="Logo Medina Group"
                 className="object-cover h-full w-full"
                 loading="lazy"
@@ -39,7 +39,7 @@ const Footer = () => {
         {/* Footer Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {FOOTER_NAVIGATION.map((footerNav) => (
-            <div>
+            <div key={footerNav.label}>
               <h3 className="text-xl font-semibold mb-4">{footerNav.label}</h3>
               <ul className="space-y-2 text-sm font-normal">
                 {footerNav.items.map((item) => (

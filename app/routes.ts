@@ -1,10 +1,19 @@
-import { type RouteConfig, index, route } from '@react-router/dev/routes';
+import {
+  type RouteConfig,
+  index,
+  prefix,
+  route,
+} from '@react-router/dev/routes';
 
 export default [
   index('routes/home.tsx'),
   route('/tentang-kami', 'routes/tentang-kami.tsx'),
   route('/galeri', 'routes/galeri.tsx'),
-  // route('/program-kursus', 'routes/program-kursus.tsx'),
+
+  ...prefix('/program-kursus', [
+    index('routes/program-kursus.tsx'),
+    route(':kelas/:program', 'routes/detail-program.tsx'),
+  ]),
   // route(
   //   '/program-kursus/kelas-reguler',
   //   'routes/program-kursus/kelas-reguler.tsx'
@@ -16,10 +25,6 @@ export default [
   // route(
   //   '/program-kursus/kelas-pendek/:slug',
   //   'routes/program-kursus/kelas-pendek/[slug].tsx'
-  // ),
-  // route(
-  //   '/program-kursus/kelas-reguler/:slug',
-  //   'routes/program-kursus/kelas-reguler/[slug].tsx'
   // ),
   // route('/berita', 'routes/berita.tsx'),
   // route('/hubungi-kami', 'routes/hubungi-kami.tsx'),

@@ -75,6 +75,6 @@ export const GALLERY_IMAGES: Galeri[] = [
     id: 13,
     src: '/img/galeri/foto13.jpg',
     alt: 'Foto 13',
-    size: 'small',
+    size: 'large',
   },
 ];

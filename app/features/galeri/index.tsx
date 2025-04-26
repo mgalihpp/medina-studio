@@ -1,11 +1,12 @@
 import { useState, useCallback } from 'react';
 import { RippleButton } from '~/components/ripple-button';
 import { GALLERY_IMAGES } from '~/constant/galeri';
-import { GalleryHeader } from './components/galeri-header';
 import { GalleryItem } from './components/galeri-item';
 import { GalleryModal } from './components/galeri-modal';
+import { SectionHeader } from '~/components/layout/header';
 
 interface GaleriProps {
+  label?: string;
   images?: Galeri[];
   title?: string;
   description?: string;
@@ -13,21 +14,25 @@ interface GaleriProps {
 }
 
 export function Galeri({
+  label = 'Galeri',
   images = GALLERY_IMAGES,
   title = 'Foto Galeri Kami',
   description = 'Jelajahi koleksi foto kami yang menampilkan keindahan tata rias, busana, serta program kursus unggulan.',
-  initialImagesToShow = 4,
+  initialImagesToShow = 8,
 }: GaleriProps) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [currentImage, setCurrentImage] = useState<Galeri | null>(null);
   const [showMore, setShowMore] = useState(false);
 
   // Memoize these functions to prevent unnecessary re-renders
   const handleImageClick = useCallback((id: number) => {
     setSelectedImage(id);
+    setCurrentImage(images.find((img) => img.id === id) || null);
   }, []);
 
   const handleCloseModal = useCallback(() => {
     setSelectedImage(null);
+    setCurrentImage(null);
   }, []);
 
   const handleShowMore = useCallback(() => {
@@ -39,14 +44,9 @@ export function Galeri({
     ? images
     : images.slice(0, initialImagesToShow);
 
-  const currentImage =
-    selectedImage !== null
-      ? images.find((img) => img.id === selectedImage)
-      : null;
-
   return (
     <div className="container mx-auto px-4 py-16 max-w-6xl">
-      <GalleryHeader title={title} description={description} />
+      <SectionHeader label={label} title={title} description={description} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
         {displayedImages.map((image) => (

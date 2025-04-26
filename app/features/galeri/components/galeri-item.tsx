@@ -13,10 +13,10 @@ export const GalleryItem = memo(function GalleryItem({
   return (
     <div
       className={`relative rounded-xl overflow-hidden cursor-pointer ${
-        image.size === 'wide'
-          ? 'col-span-2 md:col-span-4'
-          : image.size === 'large'
-          ? 'col-span-2'
+        image.size === 'large'
+          ? 'md:col-span-2 xl:col-span-4'
+          : image.size === 'medium'
+          ? 'xl:col-span-2 col-span-1'
           : ''
       }`}
       onClick={() => onClick(image.id)}
@@ -25,9 +25,9 @@ export const GalleryItem = memo(function GalleryItem({
         <img
           src={image.src || '/placeholder.svg'}
           alt={image.alt}
-          width={image.size === 'wide' ? 1200 : 600}
+          width={image.size === 'large' ? 1200 : 600}
           height={350}
-          className="w-full h-[350px] object-cover transition-transform group-hover:scale-105 duration-300 ease-in-out will-change-transform"
+          className="w-full h-[350px] object-cover aspect-video transition-transform group-hover:scale-105 duration-300 ease-in-out will-change-transform"
           loading="lazy"
           decoding="async"
         />

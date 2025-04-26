@@ -40,12 +40,12 @@ export function GalleryModal({ image, isOpen, onClose }: GalleryModalProps) {
             <DialogDescription></DialogDescription>
           </DialogTitle>
         </DialogHeader>
-        <div className="relative bg-transparent overflow-hidden rounded-lg">
-          <div className="relative h-[90dvh] w-full">
+        <div className="relative bg-transparent overflow-hidden rounded-lg w-fit">
+          <div className="relative max-h-[80dvh] sm:max-h-[90dvh]">
             <img
               src={image.src || '/placeholder.svg'}
               alt={image.alt}
-              className="w-full h-full object-contain"
+              className="h-full object-contain"
               sizes="100vw"
               loading="lazy"
               decoding="async"

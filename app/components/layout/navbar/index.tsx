@@ -19,13 +19,13 @@ export function Navbar() {
 
       <header
         className={`w-full sticky top-0 z-50 bg-white ${
-          isScrolling ? 'shadow-md' : ''
+          isScrolling || pathname !== '/' ? 'shadow-md' : ''
         } transition-all duration-300 ease-in-out`}
       >
         {/* Main navigation */}
         <nav
           className={`max-w-7xl mx-auto w-full px-4 sm:px-16 ${
-            isScrolling ? 'py-0' : 'py-4'
+            isScrolling || pathname !== '/' ? 'py-0' : 'py-4'
           } flex justify-between items-center`}
         >
           <div className="logo">

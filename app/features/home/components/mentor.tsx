@@ -24,7 +24,7 @@ export function Mentor() {
   return (
     <section
       id="mentor"
-      className="py-24 bg-gradient-to-b from-white to-main-light"
+      className="py-16 bg-gradient-to-b from-white to-main-light"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
