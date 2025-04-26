@@ -65,7 +65,7 @@ export function Pengajar() {
                       : 'bg-white/80 h-24 p-4'
                   }`}
             >
-              <h3 className="font-medium text-lg text-gray-800">
+              <h3 className="font-medium sm:text-lg text-gray-800">
                 {teacher.name}
               </h3>
               <p className="text-gray-600">{teacher.role}</p>

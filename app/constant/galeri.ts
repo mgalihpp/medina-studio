@@ -1,0 +1,80 @@
+export const GALLERY_IMAGES: Galeri[] = [
+  {
+    id: 1,
+    src: '/img/galeri/foto1.jpg',
+    alt: 'Foto 1',
+    size: 'small',
+  },
+  {
+    id: 2,
+    src: '/img/galeri/foto2.jpg',
+    alt: 'Foto 2',
+    size: 'small',
+  },
+  {
+    id: 3,
+    src: '/img/galeri/foto3.jpg',
+    alt: 'Foto 3',
+    size: 'small',
+  },
+  {
+    id: 4,
+    src: '/img/galeri/foto4.jpg',
+    alt: 'Foto 4',
+    size: 'small',
+  },
+  {
+    id: 5,
+    src: '/img/galeri/foto5.jpg',
+    alt: 'Foto 5',
+    size: 'small',
+  },
+  {
+    id: 6,
+    src: '/img/galeri/foto6.jpg',
+    alt: 'Foto 6',
+    size: 'small',
+  },
+  {
+    id: 7,
+    src: '/img/galeri/foto7.jpg',
+    alt: 'Foto 7',
+    size: 'small',
+  },
+  {
+    id: 8,
+    src: '/img/galeri/foto8.jpg',
+    alt: 'Foto 8',
+    size: 'small',
+  },
+  {
+    id: 9,
+    src: '/img/galeri/foto9.jpg',
+    alt: 'Foto 9',
+    size: 'small',
+  },
+  {
+    id: 10,
+    src: '/img/galeri/foto10.jpg',
+    alt: 'Foto 10',
+    size: 'small',
+  },
+  {
+    id: 11,
+    src: '/img/galeri/foto11.jpg',
+    alt: 'Foto 11',
+    size: 'small',
+  },
+  {
+    id: 12,
+    src: '/img/galeri/foto12.jpg',
+    alt: 'Foto 12',
+    size: 'small',
+  },
+  {
+    id: 13,
+    src: '/img/galeri/foto13.jpg',
+    alt: 'Foto 13',
+    size: 'small',
+  },
+];

@@ -58,7 +58,9 @@ export function Mentor() {
                 <p className="text-main-color font-medium">{mentor.role}</p>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-gray-600 mb-2">{mentor.specialization}</p>
+                <p className="text-gray-600 mb-2 sm:text-base text-sm">
+                  {mentor.specialization}
+                </p>
                 <p className="text-sm text-secondary-color/90 font-semibold">
                   {mentor.experience}
                 </p>

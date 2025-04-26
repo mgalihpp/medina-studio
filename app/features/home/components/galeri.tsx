@@ -12,7 +12,7 @@ const carouselItems = [
       'Koleksi hasil karya siswa kami dalam tata rias pengantin tradisional dan modern yang elegan.',
     image:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_y_08xUl9e9Mq0W_uT9v1o4R5tTkWnM0FRQ&s',
-    link: '/gallery/wedding',
+    link: '/galeri/wedding',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const carouselItems = [
       'Eksplorasi kreativitas makeup artistry untuk berbagai kesempatan dari natural hingga bold look.',
     image:
       'https://media.amway.id/sys-master/images/hd4/hda/10731172659230/5_317620_Artistry%20New%20Brush%20Set_amway-WF_Product_1000Wx1000H',
-    link: '/gallery/makeup',
+    link: '/galeri/makeup',
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const carouselItems = [
       'Berbagai teknik dan gaya penataan rambut yang trendy dan sesuai dengan berbagai acara.',
     image:
       'https://hips.hearstapps.com/hmg-prod/images/person-styling-hair-royalty-free-image-1608056805.',
-    link: '/gallery/hair',
+    link: '/galeri/hair',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const carouselItems = [
       'Suasana belajar yang menyenangkan dalam kelas-kelas yang kami selenggarakan.',
     image:
       'https://umsida.ac.id/wp-content/uploads/2024/01/DSC00698-1-1024x580-1.jpg',
-    link: '/gallery/class',
+    link: '/galeri/class',
   },
 ];
 
@@ -247,7 +247,7 @@ export function Galeri() {
                 <h3 className="text-2xl sm:text-3xl font-semibold mb-3">
                   {featuredItem.title}
                 </h3>
-                <p className="text-white/80 text-lg mb-6">
+                <p className="text-white/80 sm:text-lg mb-6 text-sm">
                   {featuredItem.description}
                 </p>
               </div>
@@ -263,7 +263,7 @@ export function Galeri() {
           {/* View All Button */}
           <div className="text-center mt-10">
             <a
-              href="/gallery"
+              href="/galeri"
               className="inline-block px-8 py-3 border-2 border-secondary-color text-secondary-color font-medium rounded-md hover:bg-secondary-color hover:text-white transition-colors duration-300"
             >
               Lihat Semua Galeri

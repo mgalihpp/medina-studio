@@ -1,39 +1,15 @@
-import { Search } from 'lucide-react';
+import { Menu, Search, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import { TopBar } from './topbar';
 import { useScroll } from '~/hooks/useScroll';
-
-const navigation = [
-  {
-    name: 'Home',
-    href: '/',
-  },
-  {
-    name: 'Tentang Kami',
-    href: '/tentang-kami',
-  },
-  {
-    name: 'Program Kursus',
-    href: '/program-kursus',
-  },
-  {
-    name: 'Galeri dan Update',
-    href: '/galeri-update',
-  },
-  {
-    name: 'Info & Promo',
-    href: '/info-promo',
-  },
-  {
-    name: 'Hubungi Kami',
-    href: '/hubungi-kami',
-  },
-];
+import { cn } from '~/lib/utils';
+import { NAVIGATION } from '~/constant/navigation';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isScrolling = useScroll();
+  const { pathname } = useLocation();
 
   return (
     <>
@@ -70,37 +46,39 @@ export function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden transition-transform duration-300 ease-in-out hover:scale-110"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden relative w-8 h-8"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
             aria-label="Toggle menu"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className={`transition-transform duration-300 ease-in-out ${
-                isMenuOpen ? 'rotate-90' : ''
+            <span
+              className={`absolute inset-0 transition-opacity duration-300 ease-in-out ${
+                isMenuOpen ? 'opacity-0 scale-90' : 'opacity-100 scale-100'
               }`}
             >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
+              <Menu className="w-full h-full" />
+            </span>
+            <span
+              className={`absolute inset-0 transition-opacity duration-300 ease-in-out ${
+                isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+              }`}
+            >
+              <X className="w-full h-full" />
+            </span>
           </button>
 
           {/* Desktop navigation */}
           <div className="hidden lg:flex items-center gap-6">
-            {navigation.map((item) => (
+            {NAVIGATION.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className="uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:text-main-color border-b-2 border-transparent hover:border-secondary-color pb-1"
+                className={cn(
+                  'uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:text-main-color border-b-2 border-transparent hover:border-secondary-color pb-1',
+                  {
+                    'text-main-colo border-secondary-color':
+                      item.href === pathname,
+                  }
+                )}
               >
                 {item.name}
               </Link>
@@ -116,12 +94,12 @@ export function Navbar() {
 
           {/* Mobile navigation */}
           <div
-            className={`absolute  left-0 right-0 bg-white shadow-md z-50 md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+            className={`absolute left-0 right-0 bg-white shadow-md z-50 lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
               isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
             } ${isScrolling ? 'top-[60px]' : 'top-[92px]'}`}
           >
             <div className="flex flex-col p-4">
-              {navigation.map((item) => (
+              {NAVIGATION.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}

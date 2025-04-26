@@ -87,7 +87,7 @@ export function Blog() {
                   <h3 className="text-xl font-semibold mb-3 line-clamp-2">
                     {post.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
+                  <p className="text-gray-600 mb-4 line-clamp-2 text-sm">
                     {post.excerpt}
                   </p>
                   <Link

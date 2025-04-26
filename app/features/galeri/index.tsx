@@ -1,0 +1,76 @@
+import { useState, useCallback } from 'react';
+import { RippleButton } from '~/components/ripple-button';
+import { GALLERY_IMAGES } from '~/constant/galeri';
+import { GalleryHeader } from './components/galeri-header';
+import { GalleryItem } from './components/galeri-item';
+import { GalleryModal } from './components/galeri-modal';
+
+interface GaleriProps {
+  images?: Galeri[];
+  title?: string;
+  description?: string;
+  initialImagesToShow?: number;
+}
+
+export function Galeri({
+  images = GALLERY_IMAGES,
+  title = 'Foto Galeri Kami',
+  description = 'Jelajahi koleksi foto kami yang menampilkan keindahan tata rias, busana, serta program kursus unggulan.',
+  initialImagesToShow = 4,
+}: GaleriProps) {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [showMore, setShowMore] = useState(false);
+
+  // Memoize these functions to prevent unnecessary re-renders
+  const handleImageClick = useCallback((id: number) => {
+    setSelectedImage(id);
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    setSelectedImage(null);
+  }, []);
+
+  const handleShowMore = useCallback(() => {
+    setShowMore(true);
+  }, []);
+
+  // Calculate these values only when dependencies change
+  const displayedImages = showMore
+    ? images
+    : images.slice(0, initialImagesToShow);
+
+  const currentImage =
+    selectedImage !== null
+      ? images.find((img) => img.id === selectedImage)
+      : null;
+
+  return (
+    <div className="container mx-auto px-4 py-16 max-w-6xl">
+      <GalleryHeader title={title} description={description} />
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        {displayedImages.map((image) => (
+          <GalleryItem
+            key={image.id}
+            image={image}
+            onClick={handleImageClick}
+          />
+        ))}
+      </div>
+
+      {!showMore && images.length > initialImagesToShow && (
+        <div className="flex justify-center mt-8">
+          <RippleButton onClick={handleShowMore}>
+            Tampilkan Lebih Banyak
+          </RippleButton>
+        </div>
+      )}
+
+      <GalleryModal
+        image={currentImage!}
+        isOpen={selectedImage !== null}
+        onClose={handleCloseModal}
+      />
+    </div>
+  );
+}

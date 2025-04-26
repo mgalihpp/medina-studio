@@ -26,7 +26,7 @@ export function Contact() {
                     <h3 className="font-playfair text-2xl font-bold mb-4">
                       Hubungi Kami
                     </h3>
-                    <p className="mb-6">
+                    <p className="mb-6 sm:text-base text-sm">
                       Kami ingin mendengar kabar dari Anda. Hubungi kami
                       menggunakan informasi di bawah ini.
                     </p>
@@ -38,7 +38,9 @@ export function Contact() {
                         </div>
                         <div>
                           <p className="font-medium">Nomor Telepon</p>
-                          <p className="text-white/80">+62 812-3456-7890</p>
+                          <p className="text-white/80 sm:text-base text-sm">
+                            +62 812-3456-7890
+                          </p>
                         </div>
                       </div>
 
@@ -48,7 +50,9 @@ export function Contact() {
                         </div>
                         <div>
                           <p className="font-medium">Email</p>
-                          <p className="text-white/80">info@medinastudio.com</p>
+                          <p className="text-white/80 sm:text-base text-sm">
+                            info@medinastudio.com
+                          </p>
                         </div>
                       </div>
 
@@ -58,7 +62,7 @@ export function Contact() {
                         </div>
                         <div>
                           <p className="font-medium">Lokasi</p>
-                          <p className="text-white/80">
+                          <p className="text-white/80 sm:text-base text-sm">
                             Graha Gardenia I Blok XG06/14 Citra Raya, Jalan
                             Gardenia Raya RT 002 RW 001, Mekarbakti, Panongan,
                             Tangerang 15710 Banten
@@ -72,8 +76,12 @@ export function Contact() {
                         </div>
                         <div>
                           <p className="font-medium">Jam Operasional</p>
-                          <p className="text-white/80">Sen-Sab: 9:00 - 19:00</p>
-                          <p className="text-white/80">Min: Tutup</p>
+                          <p className="text-white/80 sm:text-base text-sm">
+                            Sen-Sab: 9:00 - 19:00
+                          </p>
+                          <p className="text-white/80 sm:text-base text-sm">
+                            Min: Tutup
+                          </p>
                         </div>
                       </div>
                     </div>

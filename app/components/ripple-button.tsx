@@ -1,3 +1,4 @@
+import type { MouseEventHandler } from 'react';
 import { Link } from 'react-router';
 import { cn } from '~/lib/utils';
 
@@ -6,11 +7,13 @@ export function RippleButton({
   className,
   asLink = false,
   href,
+  onClick,
 }: {
   children: React.ReactNode;
   className?: string;
   asLink?: boolean;
   href?: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }) {
   if (asLink && !href) {
     throw new Error('The "href" prop is required when "asLink" is true.');
@@ -39,6 +42,8 @@ export function RippleButton({
     ripple.addEventListener('animationend', () => {
       ripple.remove();
     });
+
+    onClick?.(e as unknown as React.MouseEvent<HTMLButtonElement>);
   };
 
   const commonProps = {

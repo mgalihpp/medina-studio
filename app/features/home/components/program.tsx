@@ -7,7 +7,7 @@ import { RippleButton } from '~/components/ripple-button';
 const CourseTab = ({ active, title, onClick }: CourseTabProps) => (
   <button
     onClick={onClick}
-    className={`relative px-6 py-3 text-lg font-medium transition-all duration-300 ${
+    className={`relative px-6 py-3 sm:text-lg font-medium transition-all duration-300 ${
       active ? 'text-secondary-color' : 'text-gray-500 hover:text-gray-700'
     }`}
   >
@@ -176,7 +176,7 @@ export function Program() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="space-y-6"
               >
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                   {activeCourse.description}
                 </p>
 
@@ -217,7 +217,9 @@ export function Program() {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold mb-3">Fitur Program:</h4>
+                  <h4 className="sm:text-lg font-semibold mb-3">
+                    Fitur Program:
+                  </h4>
                   <ul className="space-y-2">
                     {activeCourse.features.map((feature, index) => (
                       <motion.li
@@ -228,14 +230,14 @@ export function Program() {
                         className="flex items-center"
                       >
                         <ChevronRight className="h-5 w-5 text-secondary-color mr-2 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span className="text-sm">{feature}</span>
                       </motion.li>
                     ))}
                   </ul>
                 </div>
 
                 <div className="pt-4">
-                  <RippleButton>Daftar Sekarang</RippleButton>
+                  <RippleButton>Lebih Detail</RippleButton>
                 </div>
               </motion.div>
             </div>

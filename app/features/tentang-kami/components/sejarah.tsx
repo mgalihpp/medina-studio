@@ -7,7 +7,7 @@ export function Sejarah() {
           Sejarah Kami
         </h1>
 
-        <p className="text-gray-500 max-w-4xl mx-auto mb-12 leading-relaxed">
+        <p className="text-gray-500 max-w-4xl mx-auto mb-12 leading-relaxed sm:text-base text-sm">
           Berdiri sejak tahun 2017 sebelum rebranding pada akhir 2024, Medina
           Studio Tata Rias dan Busana menyediakan berbagai pendidikan dan
           pelatihan komprehensif di bidang tata rias pengantin dan busana.

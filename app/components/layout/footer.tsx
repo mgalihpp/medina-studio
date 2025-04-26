@@ -1,5 +1,6 @@
 import { ArrowUp, Instagram, Linkedin } from 'lucide-react';
 import { Link } from 'react-router';
+import { FOOTER_INFO, FOOTER_NAVIGATION } from '~/constant/footer';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -21,10 +22,7 @@ const Footer = () => {
                 decoding="async"
               />
             </div>
-            <p className="max-w-2xl">
-              Kami adalah tempat kursus tata rias dan busana profesional yang
-              berkomitmen untuk membantu Anda meraih impian di dunia kecantikan.
-            </p>
+            <p className="max-w-2xl sm:text-base text-sm">{FOOTER_INFO}</p>
           </div>
           <button
             onClick={scrollToTop}
@@ -40,83 +38,88 @@ const Footer = () => {
 
         {/* Footer Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {/* Information Column */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Informasi</h3>
-            <ul className="space-y-2 text-sm font-normal">
-              <li>
-                <Link to="/faq" className="hover:underline">
-                  FAQ's
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms" className="hover:underline">
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="hover:underline">
-                  Privacy Policy
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {FOOTER_NAVIGATION.map((footerNav) => (
+            <div>
+              <h3 className="text-xl font-semibold mb-4">{footerNav.label}</h3>
+              <ul className="space-y-2 text-sm font-normal">
+                {footerNav.items.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.href}
+                      className="hover:underline sm:text-base text-sm"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
-          {/* Get To Known us Column */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-semibold mb-4">Kenali Kami</h3>
             <ul className="space-y-2 text-sm font-normal">
               <li>
-                <Link to="/about" className="hover:underline">
+                <Link
+                  to="/about"
+                  className="hover:underline sm:text-base text-sm"
+                >
                   Tentang kami
                 </Link>
               </li>
               <li>
-                <Link to="/news" className="hover:underline">
+                <Link
+                  to="/news"
+                  className="hover:underline sm:text-base text-sm"
+                >
                   Berita & Blog
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Our Brand Column */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Program kursus</h3>
             <ul className="space-y-2 text-sm font-normal">
               <li>
-                <a href="#" className="hover:underline">
+                <a href="#" className="hover:underline sm:text-base text-sm">
                   Kelas Reguler
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="#" className="hover:underline sm:text-base text-sm">
                   Kelas Pendek
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Get In Touch Column */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Hubungi kami</h3>
             <ul className="space-y-2 text-sm font-normal">
               <li>
-                <a href="mailto:cs@medinagroup.id" className="hover:underline">
+                <a
+                  href="mailto:cs@medinagroup.id"
+                  className="hover:underline sm:text-base text-sm"
+                >
                   cs@medinagroup.id
                 </a>
               </li>
               <li>
-                <a href="tel:+6285121045083" className="hover:underline">
+                <a
+                  href="tel:+6285121045083"
+                  className="hover:underline sm:text-base text-sm"
+                >
                   +62-851-2104-5083
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-white/20 pt-8">
-          <p className="text-sm mb-4 md:mb-0">
+          <p className="sm:text-base text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Medina Group. All Rights Reserved.
           </p>
 
