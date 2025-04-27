@@ -15,7 +15,7 @@ export const FOOTER_NAVIGATION = [
     items: [
       { name: 'Tentang kami', href: '/tentang-kami' },
       { name: 'Galeri', href: '/galeri' },
-      { name: 'Berita & Blog', href: '/berita' },
+      { name: 'Berita & Blog', href: '/blog' },
     ],
   },
   {

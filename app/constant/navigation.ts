@@ -17,7 +17,7 @@ export const NAVIGATION = [
   },
   {
     name: 'Info & Promo',
-    href: '/news',
+    href: '/blog',
   },
   {
     name: 'Hubungi Kami',

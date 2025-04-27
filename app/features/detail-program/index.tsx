@@ -183,21 +183,6 @@ export function DetailProgram() {
                   <ScrollBar orientation="horizontal" />
                 </ScrollArea>
                 <TabsContent value="instructors" className="mt-12 sm:mt-6">
-                  {/* <div className="space-y-4">
-                    <h3 className="text-xl font-semibold">
-                      Tim Pengajar Professional
-                    </h3>
-                    <p className="text-gray-600 text-sm sm:text-base">
-                      Tim pengajar kami terdiri dari para profesional
-                      berpengalaman dalam industri tata rias pengantin dengan
-                      pengalaman lebih dari 10 tahun.
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li>• Makeup Artist Tersertifikasi</li>
-                      <li>• Pakar Tata Rias Pengantin Tradisional</li>
-                      <li>• Desainer Busana Pengantin</li>
-                    </ul>
-                  </div> */}
                   <h2 className="text-2xl font-bold mb-6">Pengajar Program</h2>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {PROGRAM.instructors.map((instructor, index) => (
@@ -228,38 +213,6 @@ export function DetailProgram() {
                   </div>
                 </TabsContent>
                 <TabsContent value="curriculum" className="mt-6">
-                  {/* <div className="space-y-4">
-                    <h3 className="text-xl font-semibold">
-                      Kurikulum Terstruktur
-                    </h3>
-                    <ul className="space-y-4">
-                      <li className="p-4 bg-purple-50 rounded-lg">
-                        <h4 className="font-medium">
-                          Modul 1: Dasar Tata Rias Pengantin
-                        </h4>
-                        <p className="text-gray-600 mt-2">
-                          Pengenalan alat dan bahan, teknik dasar makeup
-                        </p>
-                      </li>
-                      <li className="p-4 bg-purple-50 rounded-lg">
-                        <h4 className="font-medium">
-                          Modul 2: Tata Rias Pengantin Tradisional
-                        </h4>
-                        <p className="text-gray-600 mt-2">
-                          Teknik makeup pengantin tradisional, filosofi, dan
-                          adat istiadat
-                        </p>
-                      </li>
-                      <li className="p-4 bg-purple-50 rounded-lg">
-                        <h4 className="font-medium">
-                          Modul 3: Praktik dan Evaluasi
-                        </h4>
-                        <p className="text-gray-600 mt-2">
-                          Praktik dengan model, evaluasi hasil kerja
-                        </p>
-                      </li>
-                    </ul>
-                  </div> */}
                   <h2 className="text-2xl font-bold mb-6">Kurikulum Program</h2>
                   <div className="space-y-8">
                     {PROGRAM.syllabus.map((module, index) => (
@@ -314,40 +267,6 @@ export function DetailProgram() {
                   </div>
                 </TabsContent>
                 <TabsContent value="benefits" className="mt-6">
-                  {/* <div className="space-y-4">
-                    <h3 className="text-xl font-semibold">Manfaat Program</h3>
-                    <div className="grid gap-4">
-                      <div className="flex items-start gap-3">
-                        <Star className="w-5 h-5 text-purple-600 mt-1" />
-                        <div>
-                          <h4 className="font-medium">
-                            Sertifikasi Professional
-                          </h4>
-                          <p className="text-gray-600">
-                            Dapatkan sertifikat yang diakui industri
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Star className="w-5 h-5 text-purple-600 mt-1" />
-                        <div>
-                          <h4 className="font-medium">Kesempatan Magang</h4>
-                          <p className="text-gray-600">
-                            Kesempatan magang di industri wedding
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Star className="w-5 h-5 text-purple-600 mt-1" />
-                        <div>
-                          <h4 className="font-medium">Jaringan Professional</h4>
-                          <p className="text-gray-600">
-                            Bangun jaringan dengan para professional industri
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
                   <h2 className="text-2xl font-bold mb-6">Manfaat Program</h2>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {PROGRAM.benefits.map((benefit, index) => (

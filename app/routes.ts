@@ -26,6 +26,6 @@ export default [
   //   '/program-kursus/kelas-pendek/:slug',
   //   'routes/program-kursus/kelas-pendek/[slug].tsx'
   // ),
-  // route('/berita', 'routes/berita.tsx'),
-  // route('/hubungi-kami', 'routes/hubungi-kami.tsx'),
+  route('/blog', 'routes/berita.tsx'),
+  route('/hubungi-kami', 'routes/hubungi-kami.tsx'),
 ] satisfies RouteConfig;

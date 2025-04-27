@@ -55,66 +55,6 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-
-          {/* <div>
-            <h3 className="text-xl font-semibold mb-4">Kenali Kami</h3>
-            <ul className="space-y-2 text-sm font-normal">
-              <li>
-                <Link
-                  to="/about"
-                  className="hover:underline sm:text-base text-sm"
-                >
-                  Tentang kami
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/news"
-                  className="hover:underline sm:text-base text-sm"
-                >
-                  Berita & Blog
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Program kursus</h3>
-            <ul className="space-y-2 text-sm font-normal">
-              <li>
-                <a href="#" className="hover:underline sm:text-base text-sm">
-                  Kelas Reguler
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline sm:text-base text-sm">
-                  Kelas Pendek
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Hubungi kami</h3>
-            <ul className="space-y-2 text-sm font-normal">
-              <li>
-                <a
-                  href="mailto:cs@medinagroup.id"
-                  className="hover:underline sm:text-base text-sm"
-                >
-                  cs@medinagroup.id
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+6285121045083"
-                  className="hover:underline sm:text-base text-sm"
-                >
-                  +62-851-2104-5083
-                </a>
-              </li>
-            </ul>
-          </div> */}
         </div>
 
         {/* Bottom Section */}

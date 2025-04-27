@@ -3,10 +3,9 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from '~/components/ui/dialog';
-import { X } from 'lucide-react';
 import { useCallback } from 'react';
-import { DialogDescription } from '@radix-ui/react-dialog';
 
 interface Galeri {
   src: string;
@@ -32,7 +31,7 @@ export function GalleryModal({ image, isOpen, onClose }: GalleryModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogContent
-        className="max-w-5xl p-0 bg-transparent border-none shadow-none ring-0 outline-none"
+        className="max-w-5xl max-sm:w-[90vw] p-0 bg-transparent border-none shadow-none ring-0 outline-none"
         hiddenClose
       >
         <DialogHeader className="hidden">
