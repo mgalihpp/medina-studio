@@ -18,7 +18,7 @@ export function Galeri({
   images = GALLERY_IMAGES,
   title = 'Foto Galeri Kami',
   description = 'Jelajahi koleksi foto kami yang menampilkan keindahan tata rias, busana, serta program kursus unggulan.',
-  initialImagesToShow = 8,
+  initialImagesToShow = 10,
 }: GaleriProps) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentImage, setCurrentImage] = useState<Galeri | null>(null);
@@ -48,13 +48,11 @@ export function Galeri({
     <div className="container mx-auto px-4 py-16 max-w-6xl">
       <SectionHeader label={label} title={title} description={description} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
+      <div className="columns-4 gap-4">
         {displayedImages.map((image) => (
-          <GalleryItem
-            key={image.id}
-            image={image}
-            onClick={handleImageClick}
-          />
+          <div key={image.id} className="mb-4 break-inside-avoid">
+            <GalleryItem image={image} onClick={handleImageClick} />
+          </div>
         ))}
       </div>
 
