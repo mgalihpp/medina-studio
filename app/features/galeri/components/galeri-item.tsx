@@ -50,7 +50,7 @@ export const GalleryItem = memo(function GalleryItem({
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="eager"
-          decoding="async"
+          decoding="auto"
           onLoad={handleImageLoad}
         />
 

@@ -94,7 +94,7 @@ export function Berita() {
                     alt={post.title}
                     className="object-cover h-full w-full transition-transform duration-700"
                     loading="lazy"
-                    decoding="async"
+                    decoding="auto"
                   />
                 </div>
                 <CardHeader className="px-0">

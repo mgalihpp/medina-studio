@@ -39,7 +39,7 @@ export function Navbar() {
                 width={60}
                 className="h-15 w-auto"
                 loading="lazy"
-                decoding="async"
+                decoding="auto"
               />
             </Link>
           </div>

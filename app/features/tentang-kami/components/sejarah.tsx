@@ -23,7 +23,7 @@ export function Sejarah() {
               alt="Mountain climber in orange jacket on snowy peaks"
               className="w-full h-full object-cover rounded-lg"
               loading="lazy"
-              decoding="async"
+              decoding="auto"
             />
           </div>
           <div className="rounded-lg overflow-hidden">
@@ -32,7 +32,7 @@ export function Sejarah() {
               alt="Scuba diver underwater in blue ocean"
               className="w-full h-full object-cover rounded-lg"
               loading="lazy"
-              decoding="async"
+              decoding="auto"
             />
           </div>
         </div>

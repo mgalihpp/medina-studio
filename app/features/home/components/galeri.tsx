@@ -169,7 +169,7 @@ export function Galeri() {
                         alt={item.title}
                         className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
-                        decoding="async"
+                        decoding="auto"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                       <div className="absolute bottom-0 left-0 p-6 text-white max-w-md">
@@ -239,7 +239,7 @@ export function Galeri() {
                 alt={featuredItem.title}
                 className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"
-                decoding="async"
+                decoding="auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
               <div className="absolute bottom-0 left-0 p-8 text-white max-w-2xl">

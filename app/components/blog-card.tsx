@@ -26,7 +26,7 @@ export function BlogCard({ post }: { post: Blog }) {
             hoveredCard === post.id ? 'scale-110' : 'scale-100'
           }`}
           loading="lazy"
-          decoding="async"
+          decoding="auto"
         />
       </div>
 

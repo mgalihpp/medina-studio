@@ -19,7 +19,7 @@ const Footer = () => {
                 alt="Logo Medina Group"
                 className="object-cover h-full w-full"
                 loading="lazy"
-                decoding="async"
+                decoding="auto"
               />
             </div>
             <p className="max-w-2xl sm:text-base text-sm">{FOOTER_INFO}</p>

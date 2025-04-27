@@ -30,7 +30,7 @@ export function CourseCard({ activeCourse }: { activeCourse: courses }) {
                 alt={course.title}
                 className="object-cover w-full h-full"
                 loading="lazy"
-                decoding="async"
+                decoding="auto"
               />
             </div>
             <div className="p-6">

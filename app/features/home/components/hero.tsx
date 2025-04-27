@@ -62,7 +62,7 @@ export function Hero() {
                 alt={item.title}
                 className="object-cover w-full h-full"
                 loading="lazy"
-                decoding="async"
+                decoding="auto"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />

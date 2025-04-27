@@ -30,7 +30,7 @@ export function AboutUs() {
                   alt="Medina Studio - Kursus Tata Rias"
                   className="object-cover h-auto w-full transition-transform duration-300 ease-in-out group-hover:scale-105 rounded-lg"
                   loading="lazy"
-                  decoding="async"
+                  decoding="auto"
                 />
               </div>
             </motion.div>
