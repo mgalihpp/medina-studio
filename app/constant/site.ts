@@ -16,6 +16,6 @@ export const DEFAULT_META = [
   },
   {
     property: 'og:image',
-    content: 'https://medina-studio.vercel.app/logo.png',
+    content: 'https://medina-studio.vercel.app/logo_bg.jpeg',
   },
 ];
