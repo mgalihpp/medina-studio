@@ -236,7 +236,7 @@ export function Contact() {
                         id="program_kursus"
                         className="w-full rounded-md border border-input bg-gray-50 px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                       >
-                        <option value="" disabled selected>
+                        <option value="" disabled>
                           Pilih program kursus
                         </option>
                         <option value="haircut">Haircut & Styling</option>

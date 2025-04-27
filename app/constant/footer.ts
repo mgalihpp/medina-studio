@@ -22,8 +22,8 @@ export const FOOTER_NAVIGATION = [
     label: 'Program kursus',
     items: [
       { name: 'Kursus', href: '/program-kursus' },
-      { name: 'Kelas Reguler', href: '/program-kursus/kelas-reguler' },
-      { name: 'Kelas Pendek', href: '/program-kursus/kelas-pendek' },
+      { name: 'Kelas Reguler', href: '/program-kursus?kelas=reguler' },
+      { name: 'Kelas Pendek', href: '/program-kursus?kelas=pendek' },
     ],
   },
   {

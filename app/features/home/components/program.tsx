@@ -6,7 +6,7 @@ import { ProgramContent } from './program/program-content';
 import { ProgramImage } from './program/program-image';
 
 export function Program() {
-  const [activeTab, setActiveTab] = useState('regular');
+  const [activeTab, setActiveTab] = useState('reguler');
 
   const activeCourse = courseTypes.find((course) => course.id === activeTab);
 

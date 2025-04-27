@@ -1,6 +1,6 @@
 export const courseTypes: courses[] = [
   {
-    id: 'regular',
+    id: 'reguler',
     title: 'Kelas Reguler',
     subtitle: 'Full-Time',
     description:
@@ -38,7 +38,7 @@ export const courseTypes: courses[] = [
     ],
   },
   {
-    id: 'private',
+    id: 'pendek',
     title: 'Kelas Pendek',
     subtitle: 'Privat',
     description:

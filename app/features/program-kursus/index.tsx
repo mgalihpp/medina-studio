@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CourseTab } from '~/components/course-tab';
 import { SectionHeader } from '~/components/layout/header';
 import { courseTypes } from '~/constant/couse';
 import { ProgramCard } from './components/program-card';
 import { CourseCard } from '~/features/home/components/card/course-card';
+import { useSearchParams } from 'react-router';
 
 interface ProgramKursusProps {
   label?: string;
@@ -16,8 +17,25 @@ export function ProgramKursus({
   title = 'Program Kursus Unggulan',
   description = 'Jelajahi program kursus unggulan kami yang dirancang untuk membantu Anda mencapai keahlian dalam tata rias dan busana.',
 }: ProgramKursusProps) {
-  const [activeTab, setActiveTab] = useState('regular');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [activeTab, setActiveTab] = useState('reguler');
+  const kelas = searchParams.get('kelas') ?? 'reguler';
+  useEffect(() => {
+    if (kelas !== 'reguler' && kelas !== 'pendek') {
+      setSearchParams({ kelas: 'reguler' });
+      setActiveTab('reguler');
+    } else {
+      setActiveTab(kelas);
+    }
+  }, [kelas]);
+
   const activeCourse = courseTypes.find((course) => course.id === activeTab);
+
+  const handleTabClick = (id: string) => {
+    setActiveTab(id);
+    setSearchParams({ kelas: id });
+  };
+
   return (
     <section
       id="program-kursus"
@@ -31,7 +49,7 @@ export function ProgramKursus({
             key={course.id}
             title={course.title}
             active={activeTab === course.id}
-            onClick={() => setActiveTab(course.id)}
+            onClick={() => handleTabClick(course.id)}
           />
         ))}
       </div>
