@@ -1,15 +1,9 @@
 import { Galeri } from '~/features/galeri';
 import type { Route } from './+types/galeri';
+import { DEFAULT_META } from '~/constant/site';
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: 'Medina Studio - Galeri' },
-    {
-      name: 'description',
-      content:
-        'Galeri foto dan video dari kursus tata rias dan busana profesional di Medina Studio.',
-    },
-  ];
+  return DEFAULT_META;
 }
 
 export default function GaleriPage() {

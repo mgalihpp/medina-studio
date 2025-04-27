@@ -1,17 +1,9 @@
 import { DetailProgram } from '~/features/detail-program';
 import type { Route } from './+types/detail-program';
+import { DEFAULT_META } from '~/constant/site';
 
 export function meta({ params }: Route.MetaArgs) {
-  console.log('params', params);
-
-  return [
-    { title: 'Medina Studio - Detail Program' },
-    {
-      name: 'description',
-      content:
-        'Temukan berbagai program kursus berkualitas di Medina Studio untuk meningkatkan keterampilan Anda.',
-    },
-  ];
+  return DEFAULT_META;
 }
 
 export default function DetailProgramPage() {

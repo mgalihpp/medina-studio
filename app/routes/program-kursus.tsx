@@ -1,15 +1,9 @@
 import { ProgramKursus } from '~/features/program-kursus';
 import type { Route } from './+types/program-kursus';
+import { DEFAULT_META } from '~/constant/site';
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: 'Medina Studio - Program Kursus' },
-    {
-      name: 'description',
-      content:
-        'Temukan berbagai program kursus berkualitas di Medina Studio untuk meningkatkan keterampilan Anda.',
-    },
-  ];
+  return DEFAULT_META;
 }
 
 export default function ProgramKursusPage() {
