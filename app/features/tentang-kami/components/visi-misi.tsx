@@ -10,7 +10,7 @@ export function VisiDanMisi() {
             alt="foto visi misi"
             className="h-full w-full object-cover rounded-lg"
             loading="lazy"
-            decoding="auto"
+            decoding="async"
           />
         </div>
         <div className="flex flex-col gap-6 max-w-3xl mx-auto h-full">

@@ -20,7 +20,7 @@ export function ProgramImage({ activeCourse }: { activeCourse: courses }) {
           alt={`${activeCourse.title} - Medina Studio`}
           className="object-cover h-full w-full"
           loading="lazy"
-          decoding="auto"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">

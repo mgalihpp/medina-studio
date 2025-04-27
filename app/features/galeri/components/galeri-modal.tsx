@@ -47,7 +47,7 @@ export function GalleryModal({ image, isOpen, onClose }: GalleryModalProps) {
               className="h-full object-contain"
               sizes="100vw"
               loading="lazy"
-              decoding="auto"
+              decoding="async"
             />
           </div>
 
