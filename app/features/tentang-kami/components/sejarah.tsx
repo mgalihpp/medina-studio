@@ -21,8 +21,6 @@ export function Sejarah() {
             <img
               src="/img/tentang-kami/foto1.jpg"
               alt="Mountain climber in orange jacket on snowy peaks"
-              width={400}
-              height={200}
               className="w-full h-full object-cover rounded-lg"
               loading="lazy"
               decoding="async"
@@ -32,8 +30,6 @@ export function Sejarah() {
             <img
               src="/img/tentang-kami/foto2.jpg"
               alt="Scuba diver underwater in blue ocean"
-              width={400}
-              height={200}
               className="w-full h-full object-cover rounded-lg"
               loading="lazy"
               decoding="async"

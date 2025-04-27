@@ -40,10 +40,10 @@ export function BlogCard({ post }: { post: Blog }) {
         </p>
         <Link
           to={`/blog/${post.slug}`}
-          className="inline-flex items-center gap-2 px-6 py-2 bg-main-color text-white rounded-full hover:bg-secondary-color transition-colors duration-300"
+          className="inline-flex items-center gap-2 px-6 py-2 bg-main-color text-white rounded-full hover:bg-secondary-color transition-colors duration-300 group"
         >
           <span>Read more</span>
-          <ArrowUpRight className="h-4 w-4" />
+          <ArrowUpRight className="h-4 w-4 group-hover:rotate-[45deg] transition-transform duration-300 ease-in-out" />
         </Link>
       </div>
     </motion.div>

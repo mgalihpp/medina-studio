@@ -118,7 +118,6 @@ export function Galeri() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Galeri
             </h2>
-            {/* <div className="w-24 h-1 bg-[#9b8579] mx-auto mb-4"></div> */}
             <p className="text-gray-600 max-w-2xl mx-auto">
               Jelajahi kegiatan dari Medina Studio yang menampilkan keindahan
               seni tata rias

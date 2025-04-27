@@ -13,9 +13,9 @@ const Footer = () => {
         {/* Company Info */}
         <div className="mb-16 w-full flex flex-col sm:flex-row gap-8 sm:gap-0 max-sm:items-center justify-between">
           <div className="flex flex-col gap-2">
-            <div className="relative overflow-hidden w-24 h-24 rounded-full mb-4">
+            <div className="relative overflow-hidden size-32 rounded-full mb-4">
               <img
-                src="/logo.png"
+                src="/logo_baru.png"
                 alt="Logo Medina Group"
                 className="object-cover h-full w-full"
                 loading="lazy"

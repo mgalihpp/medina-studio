@@ -3,23 +3,58 @@ import { Textarea } from '~/components/ui/textarea';
 import { Card, CardContent } from '~/components/ui/card';
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 import { RippleButton } from '~/components/ripple-button';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
+const itemVariant = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' },
+  },
+};
 export function Contact() {
+  // Referensi untuk elemen kiri dan kanan
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+
+  // Gunakan useInView untuk mendeteksi elemen dalam viewport
+  const leftInView = useInView(leftRef, { once: true, margin: '-100px' });
+  const rightInView = useInView(rightRef, { once: true, margin: '-100px' });
+
   return (
     <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div
+            variants={itemVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
             <h2 className="section-subtitle">Hubungi Kami</h2>
             <div className="w-24 h-1 bg-secondary-color mx-auto mb-4"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Jika anda memiliki pertanyaan atau ingin membuat janji temu?
               Hubungi kami dan kami akan dengan senang hati membantu.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-2 order-2 lg:order-1">
+            <motion.div
+              ref={leftRef} // Referensi untuk elemen kiri
+              className="lg:col-span-2 order-2 lg:order-1"
+              variants={cardVariants}
+              initial="hidden"
+              animate={leftInView ? 'visible' : 'hidden'} // Animasi berdasarkan visibilitas
+            >
               <Card className="overflow-hidden bg-main-color">
                 <CardContent className="p-0">
                   <div className="p-8 text-white">
@@ -155,27 +190,18 @@ export function Contact() {
                       </div>
                     </div>
                   </div>
-
-                  {/* <div className="p-8">
-                  <h3 className="section-subtitle text-white">Lokasi kami</h3>
-                  <div className="bg-gray-200 h-64 rounded-lg">
-                    Google Maps iframe would go here
-                    <div className="w-full h-full flex items-center justify-center text-gray-400">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d777.0162607785574!2d106.51785214701724!3d-6.255693908724406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e42076e80a0ee27%3A0x8fde97f70757989f!2sMedina%20Studio%20Makeup%2FTata%20Rias%20Pengantin%20dan%20Busana!5e0!3m2!1sen!2sid!4v1739368524085!5m2!1sen!2sid"
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                      ></iframe>
-                    </div>
-                  </div>
-                </div> */}
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
 
-            <div className="lg:col-span-3 order-1 lg:order-2">
-              <Card>
+            <motion.div
+              ref={rightRef} // Referensi untuk elemen kanan
+              className="lg:col-span-3 order-1 lg:order-2 h-full"
+              variants={cardVariants}
+              initial="hidden"
+              animate={rightInView ? 'visible' : 'hidden'} // Animasi berdasarkan visibilitas
+            >
+              <Card className="h-full">
                 <CardContent className="p-8 h-full">
                   <h3 className="font-playfair text-2xl font-bold mb-6">
                     Kirim kami pesan
@@ -258,7 +284,7 @@ export function Contact() {
                       <Textarea
                         id="message"
                         placeholder="Bagaimana kami dapat membantu Anda?"
-                        className="bg-gray-50 min-h-32"
+                        className="bg-gray-50 min-h-32 max-h-40"
                       />
                     </div>
 
@@ -268,7 +294,7 @@ export function Contact() {
                   </form>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

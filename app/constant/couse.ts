@@ -5,7 +5,7 @@ export const courseTypes: courses[] = [
     subtitle: 'Full-Time',
     description:
       'Kelas dengan kurikulum terstruktur dan jangka waktu lebih panjang agar peserta mendapatkan pemahaman mendalam mengenai teori, aplikasi dan tradisi di balik tata rias pengantin tradisional dan modern.',
-    image: '/ngajar1.jpg',
+    image: '/img/ngajar/ngajar1.jpg',
     duration: '3-6 bulan',
     schedule: '3x pertemuan per minggu',
     students: '8-12 peserta per kelas',

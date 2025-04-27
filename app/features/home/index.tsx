@@ -1,6 +1,7 @@
 import { AboutUs } from './components/about-us';
 import { Blog } from './components/blog';
 import { Contact } from './components/contact';
+import { Faq } from './components/faq';
 import { Features } from './components/features';
 import { Galeri } from './components/galeri';
 import { Hero } from './components/hero';
@@ -17,6 +18,7 @@ export function Home() {
       <Mentor />
       <Galeri />
       <Blog />
+      <Faq />
       <Contact />
     </>
   );

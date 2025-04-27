@@ -12,6 +12,7 @@ import {
   CardContent,
 } from '~/components/ui/card';
 import { BLOG_POSTS } from '~/constant/blog';
+import { PopularCard } from './card/popular-card';
 
 export function Berita() {
   const blogPosts = [
@@ -85,7 +86,7 @@ export function Berita() {
             {blogPosts.map((post) => (
               <Card
                 key={post.id}
-                className="flex-1 p-0 border-none outline-none shadow-none"
+                className="flex-1 p-0 border-none outline-none shadow-none hover:bg-main-light/40"
               >
                 <div className="relative rounded-lg h-56 w-full overflow-hidden">
                   <img
@@ -96,7 +97,7 @@ export function Berita() {
                     decoding="async"
                   />
                 </div>
-                <CardHeader>
+                <CardHeader className="px-0">
                   <CardTitle className="text-xl line-clamp-2">
                     {post.title}
                   </CardTitle>
@@ -104,7 +105,7 @@ export function Berita() {
                     {post.description}
                   </CardDescription>
                 </CardHeader>
-                <CardFooter className="justify-between">
+                <CardFooter className="justify-between px-0">
                   <div className="flex items-center space-x-3">
                     <Avatar>
                       <AvatarImage
@@ -138,21 +139,7 @@ export function Berita() {
               </CardHeader>
               <CardContent className="space-y-6">
                 {popularPosts.map((post, index) => (
-                  <div key={index} className="flex space-x-4">
-                    <div className="flex-1">
-                      <h4 className="font-medium mb-1 text-sm line-clamp-2">
-                        {post.title}
-                      </h4>
-                      <p className="text-xs text-muted-foreground">
-                        {post.author}
-                      </p>
-                    </div>
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-20 h-20 object-cover rounded"
-                    />
-                  </div>
+                  <PopularCard key={index} post={post} />
                 ))}
               </CardContent>
             </Card>

@@ -1,11 +1,17 @@
 import { motion } from 'framer-motion';
 
+const imageVariant = {
+  hidden: { opacity: 0, scale: 0.95 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
+
 export function ProgramImage({ activeCourse }: { activeCourse: courses }) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
+      variants={imageVariant}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
       className="relative h-96"
     >
       <div className="relative w-full h-full overflow-hidden rounded-lg shadow-xl">
