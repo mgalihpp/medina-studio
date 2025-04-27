@@ -49,7 +49,7 @@ export const GalleryItem = memo(function GalleryItem({
           className={`w-full h-full transition-transform group-hover:scale-105 duration-300 ease-in-out will-change-transform ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          loading="lazy"
+          loading="eager"
           decoding="async"
           onLoad={handleImageLoad}
         />
