@@ -3,7 +3,7 @@ export const DEFAULT_META = [
   {
     name: 'description',
     content:
-      'Medina Studio adalah tempat kursus tata rias dan busana profesional yang telah berdiri sejak tahun XXXX. Kursus Tata Rias dan Busana Berkualitas dan Terjangkau di Tangerang',
+      'Berdiri sejak tahun 2017 sebelum rebranding pada akhir 2024, Medina Studio Tata Rias dan Busana menyediakan berbagai pendidikan dan pelatihan komprehensif di bidang tata rias pengantin dan busana. Dengan sederet keunggulan dan harga yang terjangkau, jadikan Medina Studio sebagai institut pendidikan pilihan anda para make up artist dan fashion designer masa depan!',
   },
   {
     property: 'og:title',
@@ -12,7 +12,7 @@ export const DEFAULT_META = [
   {
     property: 'og:description',
     content:
-      'Medina Studio adalah tempat kursus tata rias dan busana profesional yang telah berdiri sejak tahun XXXX. Kursus Tata Rias dan Busana Berkualitas dan Terjangkau di Tangerang',
+      'Berdiri sejak tahun 2017 sebelum rebranding pada akhir 2024, Medina Studio Tata Rias dan Busana menyediakan berbagai pendidikan dan pelatihan komprehensif di bidang tata rias pengantin dan busana. Dengan sederet keunggulan dan harga yang terjangkau, jadikan Medina Studio sebagai institut pendidikan pilihan anda para make up artist dan fashion designer masa depan!',
   },
   {
     property: 'og:image',
