@@ -53,7 +53,7 @@ export function AboutUs() {
               viewport={{ once: true, amount: 0.2 }}
               className="space-y-6 p-4"
             >
-              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+              <p className="text-gray-700 leading-relaxed text-base">
                 Berdiri sejak tahun 2017 sebelum rebranding pada akhir 2024,
                 Medina Studio Tata Rias dan Busana menyediakan berbagai
                 pendidikan dan pelatihan komprehensif di bidang tata rias
