@@ -3,7 +3,7 @@ import { RippleButton } from '~/components/ripple-button';
 
 export function AboutUs() {
   return (
-    <section id="tentang-kami" className="py-16 bg-white">
+    <section id="tentang-kami" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
