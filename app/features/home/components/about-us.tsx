@@ -24,22 +24,10 @@ export function AboutUs() {
               viewport={{ once: true, amount: 0.2 }}
               className="relative rounded-lg shadow-lg overflow-hidden"
             >
-              <div
-                className="relative w-full h-full rounded-lg shadow-xl"
-                style={{
-                  backgroundImage: `url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kanvas.jpg-mBBsVjcruNF4c12MttQcXc3YV3Fqt9.jpeg)`,
-                  backgroundSize: '100% 100%',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat',
-                  aspectRatio: '16 / 9',
-                }}
-                role="img"
-                aria-label="Medina Studio - Kursus Tata Rias"
-              />
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kanvas.jpg-mBBsVjcruNF4c12MttQcXc3YV3Fqt9.jpeg"
                 alt="Medina Studio - Kursus Tata Rias"
-                className="absolute inset-0 w-full h-full"
+                className="w-full h-full"
                 loading="lazy"
                 decoding="async"
               />
