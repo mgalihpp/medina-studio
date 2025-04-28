@@ -22,17 +22,27 @@ export function AboutUs() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
               viewport={{ once: true, amount: 0.2 }}
-              className="relative bg-white p-4 rounded-lg shadow-lg"
+              className="relative rounded-lg shadow-lg overflow-hidden"
             >
-              <div className="relative h-auto w-full overflow-hidden shadow-xl group">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kanvas.jpg-mBBsVjcruNF4c12MttQcXc3YV3Fqt9.jpeg"
-                  alt="Medina Studio - Kursus Tata Rias"
-                  className="object-cover h-auto w-full transition-transform duration-300 ease-in-out group-hover:scale-105 rounded-lg"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+              <div
+                className="relative w-full h-full rounded-lg shadow-xl"
+                style={{
+                  backgroundImage: `url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kanvas.jpg-mBBsVjcruNF4c12MttQcXc3YV3Fqt9.jpeg)`,
+                  backgroundSize: '100% 100%',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  aspectRatio: '16 / 9',
+                }}
+                role="img"
+                aria-label="Medina Studio - Kursus Tata Rias"
+              />
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kanvas.jpg-mBBsVjcruNF4c12MttQcXc3YV3Fqt9.jpeg"
+                alt="Medina Studio - Kursus Tata Rias"
+                className="absolute inset-0 w-full h-full"
+                loading="lazy"
+                decoding="async"
+              />
             </motion.div>
 
             {/* Teks kanan: animasi saat scroll */}
@@ -43,7 +53,7 @@ export function AboutUs() {
               viewport={{ once: true, amount: 0.2 }}
               className="space-y-6 p-4"
             >
-              <p className="text-gray-700 leading-relaxed text-sm sm:text-lg">
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                 Berdiri sejak tahun 2017 sebelum rebranding pada akhir 2024,
                 Medina Studio Tata Rias dan Busana menyediakan berbagai
                 pendidikan dan pelatihan komprehensif di bidang tata rias

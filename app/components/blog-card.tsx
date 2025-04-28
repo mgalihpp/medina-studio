@@ -32,7 +32,7 @@ export function BlogCard({ post }: { post: Blog }) {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-3 line-clamp-2">
+        <h3 className="text-lg font-semibold mb-3 line-clamp-2">
           {post.title}
         </h3>
         <p className="text-gray-600 mb-4 line-clamp-2 text-sm">

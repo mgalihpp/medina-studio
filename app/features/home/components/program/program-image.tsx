@@ -14,11 +14,23 @@ export function ProgramImage({ activeCourse }: { activeCourse: courses }) {
       viewport={{ once: true }}
       className="relative h-96"
     >
-      <div className="relative w-full h-full overflow-hidden rounded-lg shadow-xl">
+      <div
+        className="relative w-full h-full overflow-hidden rounded-lg shadow-xl"
+        style={{
+          backgroundImage: `url(${activeCourse.image || '/placeholder.svg'})`,
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          aspectRatio: '16 / 9',
+        }}
+        role="img"
+        aria-label={`${activeCourse.title} - ${activeCourse.subtitle}`}
+      >
+        {/* Hidden img tag for SEO and accessibility */}
         <img
           src={activeCourse.image || '/placeholder.svg'}
-          alt={`${activeCourse.title} - Medina Studio`}
-          className="object-cover h-full w-full"
+          alt={`${activeCourse.title} - ${activeCourse.subtitle} at Medina Studio`}
+          className="absolute opacity-0 w-full h-full"
           loading="lazy"
           decoding="async"
         />

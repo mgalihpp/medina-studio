@@ -34,9 +34,7 @@ export function Pengajar() {
     <section id="pengajar" className="container mx-auto px-4 py-16 max-w-6xl">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="lg:pr-8 flex justify-center flex-col max-sm:col-span-1 max-lg:col-span-2 max-lg:text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Kenali para pengajar kami
-          </h2>
+          <h2 className="section-title mb-4">Kenali para pengajar kami</h2>
           <p className="text-gray-600 mb-8">
             Para profesional berpengalaman yang mendedikasikan diri untuk
             mengembangkan bakat dan keterampilan siswa kami.

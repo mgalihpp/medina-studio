@@ -2,9 +2,7 @@ export function Lokasi() {
   return (
     <section id="lokasi" className="container mx-auto px-4 py-12 max-w-7xl">
       <div className="section-subtitle">Kantor Kami</div>
-      <h2 className="text-4xl font-bold text-gray-800 mb-12">
-        Kunjungi Kantor Kami
-      </h2>
+      <h2 className="section-title mb-12">Kunjungi Kantor Kami</h2>
 
       <div className="w-full h-[450px] rounded-lg overflow-hidden relative">
         <iframe
