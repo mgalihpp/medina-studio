@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CourseTab } from '~/components/course-tab';
 import { SectionHeader } from '~/components/layout/header';
-import { courseTypes } from '~/constant/couse';
+import { courseTypes } from '~/constant/course';
 import { ProgramCard } from './components/program-card';
 import { CourseCard } from '~/features/home/components/card/course-card';
 import { useSearchParams } from 'react-router';

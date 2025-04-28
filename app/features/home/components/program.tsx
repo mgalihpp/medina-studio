@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CourseTab } from '~/components/course-tab';
-import { courseTypes } from '~/constant/couse';
+import { courseTypes } from '~/constant/course';
 import { ProgramContent } from './program/program-content';
 import { ProgramImage } from './program/program-image';
 
