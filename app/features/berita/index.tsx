@@ -1,19 +1,9 @@
-import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router';
 import { BlogCard } from '~/components/blog-card';
 import { SectionHeader } from '~/components/layout/header';
-import { Avatar, AvatarImage, AvatarFallback } from '~/components/ui/avatar';
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardFooter,
-  CardContent,
-} from '~/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '~/components/ui/card';
 import { BLOG_POSTS } from '~/constant/blog';
-import { PopularCard } from './card/popular-card';
-import { RecentCard } from './card/recent-card';
+import { PopularCard } from './components/card/popular-card';
+import { RecentCard } from './components/card/recent-card';
 
 export function Berita() {
   const blogPosts = [
