@@ -12,7 +12,7 @@ export default [
 
   ...prefix('/program-kursus', [
     index('routes/program-kursus.tsx'),
-    route(':kelas/:program', 'routes/detail-program.tsx'),
+    route(':program', 'routes/detail-program.tsx'),
   ]),
   // route(
   //   '/program-kursus/kelas-reguler',

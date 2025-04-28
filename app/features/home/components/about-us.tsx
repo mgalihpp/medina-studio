@@ -50,6 +50,20 @@ export function AboutUs() {
                 pilihan anda para make up artist dan fashion designer masa
                 depan!
               </p>
+              <p className="text-gray-700 leading-relaxed text-base">
+                Kami menawarkan kurikulum terstruktur, mulai dari teknik dasar
+                hingga tingkat lanjut, yang selalu mengikuti tren terkini di
+                industri kreatif. Setiap siswa mendapatkan pendekatan personal
+                untuk mengasah potensi unik mereka.
+              </p>
+              {/* <div className="flex items-center space-x-3">
+                <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <p className="text-gray-700 leading-relaxed text-base">
+                  Fasilitas modern: studio rias, ruang praktik, dan peralatan terbaru untuk pengalaman belajar optimal.
+                </p>
+              </div> */}
               <RippleButton asLink href="/tentang-kami">
                 Lebih lanjut
               </RippleButton>
@@ -60,23 +74,3 @@ export function AboutUs() {
     </section>
   );
 }
-
-//               <p className="text-gray-700 leading-relaxed">
-//                 Medina Studio adalah tempat kursus tata rias dan busana
-//                 profesional yang telah berdiri sejak tahun 2017. Kami
-//                 berkomitmen untuk memberikan pendidikan terbaik dalam bidang
-//                 tata rias dan busana dengan pendekatan yang komprehensif dan
-//                 personal.
-//               </p>
-//               {/* <p className="text-gray-700 leading-relaxed">
-//                 Didirikan dengan visi untuk menciptakan para ahli tata rias dan
-//                 desainer busana yang siap bersaing di industri kreatif, Medina
-//                 Studio menawarkan kurikulum yang terstruktur, mulai dari teknik
-//                 dasar hingga tingkat lanjut yang mengikuti tren terkini.
-//               </p>
-//               <p className="text-gray-700 leading-relaxed">
-//                 Kami memahami bahwa setiap siswa memiliki potensi unik, oleh
-//                 karena itu kami menyediakan berbagai fasilitas modern seperti
-//                 studio rias, ruang praktik, dan peralatan terbaru untuk
-//                 mendukung proses belajar yang optimal dan menyenangkan.
-//               </p> */}

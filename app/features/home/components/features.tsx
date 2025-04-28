@@ -1,5 +1,13 @@
 import { motion, useAnimation, useInView } from 'framer-motion';
-import { Award, BookOpen, School, GraduationCap } from 'lucide-react';
+import {
+  Award,
+  BookOpen,
+  School,
+  GraduationCap,
+  Clock,
+  Scissors,
+  Users,
+} from 'lucide-react';
 import { useRef, useEffect, useState } from 'react';
 
 const containerVariants = {
@@ -42,6 +50,18 @@ export function Features() {
       description:
         'Dapatkan sertifikat resmi yang diakui industri setelah menyelesaikan program kursus.',
     },
+    {
+      icon: <Clock className="w-8 h-8 text-gray-900" />,
+      title: 'Jadwal Fleksibel',
+      description:
+        'Kami menyediakan jadwal yang fleksibel untuk memudahkan Anda dalam mengatur waktu belajar.',
+    },
+    {
+      icon: <Users className="w-8 h-8 text-gray-900" />,
+      title: 'Kelas Kecil',
+      description:
+        'Rasio siswa dan pengajar yang seimbang untuk pembelajaran optimal.',
+    },
   ];
 
   return (
@@ -65,17 +85,18 @@ export function Features() {
             tempat terbaik untuk belajar tata rias dan busana.
           </motion.p>
         </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-              delay={index}
-            />
-          ))}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                delay={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

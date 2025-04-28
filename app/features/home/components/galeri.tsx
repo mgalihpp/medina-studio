@@ -172,7 +172,7 @@ export function Galeri() {
                         decoding="async"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                      <div className="absolute bottom-0 left-0 p-6 text-white max-w-md">
+                      <div className="absolute bottom-0 left-0 p-6 text-white max-w-full">
                         <h3 className="text-2xl font-semibold mb-2">
                           {item.title}
                         </h3>
@@ -180,12 +180,12 @@ export function Galeri() {
                           {item.description}
                         </p>
                       </div>
-                      <a
+                      {/* <a
                         href={item.link}
                         className="absolute bottom-6 right-6 w-12 h-12 bg-main-color rounded-full flex items-center justify-center transition-transform duration-300"
                       >
                         <ArrowUpRight className="h-5 w-5 text-white group-hover:rotate-[45deg] transition-transform ease-in-out duration-300" />
-                      </a>
+                      </a> */}
                     </div>
                   </motion.div>
                 ))}
@@ -233,8 +233,18 @@ export function Galeri() {
             viewport={{ once: true }}
             className="relative rounded-xl overflow-hidden shadow-lg group"
           >
-            <div className="relative h-[400px] w-full">
-              <img
+            <div className="relative h-[500px] w-full">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/R8kAyTsXg3w?si=XdpBI9hYEJW0xgKR"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+              {/* <img
                 src={featuredItem.image || '/placeholder.svg'}
                 alt={featuredItem.title}
                 className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
@@ -255,7 +265,7 @@ export function Galeri() {
                 className="absolute bottom-8 right-8 w-14 h-14 bg-main-color rounded-full flex items-center justify-center transition-transform duration-300"
               >
                 <ArrowUpRight className="h-6 w-6 text-white group-hover:rotate-45 transition-transform duration-300" />
-              </a>
+              </a> */}
             </div>
           </motion.div>
 
