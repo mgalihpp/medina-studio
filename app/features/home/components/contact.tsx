@@ -269,7 +269,7 @@ export function Contact() {
                           Tata Rias Pengantin
                         </option>
                         <option value="desain-busana">Desain Busana</option>
-                        <option value="henna-art">Henna Art"</option>
+                        <option value="henna-art">Henna Art</option>
                         <option value="menjahit">Menjahit</option>
                       </select>
                     </div>
