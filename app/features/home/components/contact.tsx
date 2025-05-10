@@ -265,12 +265,12 @@ export function Contact() {
                         <option value="" disabled>
                           Pilih program kursus
                         </option>
-                        <option value="haircut">Haircut & Styling</option>
-                        <option value="coloring">Hair Coloring</option>
-                        <option value="nails">Nail Services</option>
-                        <option value="makeup">Makeup Application</option>
-                        <option value="facial">Facials</option>
-                        <option value="spa">Spa Treatments</option>
+                        <option value="tata-rias-pengantin">
+                          Tata Rias Pengantin
+                        </option>
+                        <option value="desain-busana">Desain Busana</option>
+                        <option value="henna-art">Henna Art"</option>
+                        <option value="menjahit">Menjahit</option>
                       </select>
                     </div>
 
