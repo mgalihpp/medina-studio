@@ -233,7 +233,7 @@ export function Galeri() {
             viewport={{ once: true }}
             className="relative rounded-xl overflow-hidden shadow-lg group"
           >
-            <div className="relative h-[500px] w-full">
+            <div className="relative h-[250px] md:h-[500px] w-full">
               <iframe
                 width="100%"
                 height="100%"
