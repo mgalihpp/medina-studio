@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { PROMO_DISCOUNT } from '~/constant/discount';
 
 export function Promo() {
   return (
@@ -9,13 +10,13 @@ export function Promo() {
             Promo Spesial Bulan Ini!
           </h2>
           <p className="text-xl mb-8">
-            Dapatkan diskon 25% untuk pendaftaran kursus apa pun sebelum akhir
-            bulan ini.
+            Dapatkan diskon {PROMO_DISCOUNT}% untuk pendaftaran kursus apa pun
+            sebelum akhir bulan ini.
           </p>
           <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg mb-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center">
-                <div className="text-4xl font-bold">25%</div>
+                <div className="text-4xl font-bold">{PROMO_DISCOUNT}%</div>
                 <div className="text-sm">Diskon</div>
               </div>
               <div className="text-center">

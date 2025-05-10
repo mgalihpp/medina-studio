@@ -1,6 +1,6 @@
 import { SectionHeader } from '~/components/layout/header';
 import { PROGRAM_KURSUS } from '~/constant/course';
-import { CourseCard } from '~/features/home/components/card/course-card';
+import { ListCourseCard } from '~/components/list-course-card';
 import { Promo } from '~/components/promo';
 import { Faq } from '~/components/faq';
 
@@ -23,7 +23,7 @@ export function ProgramKursus({
       >
         <SectionHeader label={label} title={title} description={description} />
 
-        <CourseCard courses={PROGRAM_KURSUS} />
+        <ListCourseCard courses={PROGRAM_KURSUS} />
       </section>
 
       <Promo />

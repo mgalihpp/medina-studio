@@ -3,7 +3,7 @@ import { Clock } from 'lucide-react';
 import { Link } from 'react-router';
 import { RippleButton } from '~/components/ripple-button';
 
-export function CourseCard({ courses }: { courses: Course[] }) {
+export function ListCourseCard({ courses }: { courses: Course[] }) {
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
