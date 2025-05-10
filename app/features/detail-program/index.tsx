@@ -783,19 +783,10 @@ const coursesData: CourseDetailType[] = [
 
 export function DetailProgram() {
   const { program } = useParams<{ program: string }>();
-  const [course, setCourse] = useState<CourseDetailProps | null>(null);
 
-  useEffect(() => {
-    const foundCourse = coursesData.find(
-      (c: CourseType & Partial<CourseDetailProps>) => c.id === program
-    );
-
-    if (foundCourse) {
-      setCourse(foundCourse as CourseDetailProps);
-    } else {
-      console.error('Course not found with ID:', program);
-    }
-  }, [program]);
+  const course = coursesData.find(
+    (c: CourseType & Partial<CourseDetailProps>) => c.id === program
+  );
 
   if (!course) {
     return <NotFound />;
