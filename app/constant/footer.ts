@@ -21,9 +21,14 @@ export const FOOTER_NAVIGATION = [
   {
     label: 'Program kursus',
     items: [
-      { name: 'Kursus', href: '/program-kursus' },
-      { name: 'Kelas Reguler', href: '/program-kursus?kelas=reguler' },
-      { name: 'Kelas Pendek', href: '/program-kursus?kelas=pendek' },
+      { name: 'Semua Program Kursus', href: '/program-kursus' },
+      {
+        name: 'Tata Rias Pengantin',
+        href: '/program-kursus/tata-rias-pengantin',
+      },
+      { name: 'Desain Busana', href: '/program-kursus/desain-busana' },
+      { name: 'Henna Art', href: '/program-kursus/henna-art' },
+      { name: 'Menjahit', href: '/program-kursus/menjahit' },
     ],
   },
   {

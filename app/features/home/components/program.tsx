@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CourseTab } from '~/components/course-tab';
-import { courseTypes } from '~/constant/course';
+import { TIPE_KELAS } from '~/constant/course';
 import { ProgramContent } from './program/program-content';
 import { ProgramImage } from './program/program-image';
 
@@ -21,7 +21,7 @@ const itemVariant = {
 
 export function Program() {
   const [activeTab, setActiveTab] = useState('reguler');
-  const activeCourse = courseTypes.find((course) => course.id === activeTab);
+  const activeClass = TIPE_KELAS.find((kelas) => kelas.id === activeTab);
 
   return (
     <section id="program" className="py-16 bg-white overflow-hidden">
@@ -50,19 +50,19 @@ export function Program() {
             whileInView="show"
             viewport={{ once: true }}
           >
-            {courseTypes.map((course) => (
-              <motion.div key={course.id} variants={itemVariant}>
+            {TIPE_KELAS.map((kelas) => (
+              <motion.div key={kelas.id} variants={itemVariant}>
                 <CourseTab
-                  title={course.title}
-                  active={activeTab === course.id}
-                  onClick={() => setActiveTab(course.id)}
+                  title={kelas.title}
+                  active={activeTab === kelas.id}
+                  onClick={() => setActiveTab(kelas.id)}
                 />
               </motion.div>
             ))}
           </motion.div>
 
           {/* Content */}
-          {activeCourse && (
+          {activeClass && (
             <motion.div
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-sm:items-center mb-16"
               variants={containerVariant}
@@ -70,8 +70,8 @@ export function Program() {
               whileInView="show"
               viewport={{ once: true }}
             >
-              <ProgramImage activeCourse={activeCourse} />
-              <ProgramContent activeCourse={activeCourse} />
+              <ProgramImage kelas={activeClass} />
+              <ProgramContent kelas={activeClass} />
             </motion.div>
           )}
         </div>

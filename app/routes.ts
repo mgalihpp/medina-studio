@@ -14,18 +14,7 @@ export default [
     index('routes/program-kursus.tsx'),
     route(':program', 'routes/detail-program.tsx'),
   ]),
-  // route(
-  //   '/program-kursus/kelas-reguler',
-  //   'routes/program-kursus/kelas-reguler.tsx'
-  // ),
-  // route(
-  //   '/program-kursus/kelas-pendek',
-  //   'routes/program-kursus/kelas-pendek.tsx'
-  // ),
-  // route(
-  //   '/program-kursus/kelas-pendek/:slug',
-  //   'routes/program-kursus/kelas-pendek/[slug].tsx'
-  // ),
   route('/blog', 'routes/berita.tsx'),
   route('/hubungi-kami', 'routes/hubungi-kami.tsx'),
+  route('/*', 'routes/not-found.tsx'),
 ] satisfies RouteConfig;

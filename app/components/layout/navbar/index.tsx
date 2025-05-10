@@ -145,7 +145,7 @@ export function Navbar() {
                             <p className="text-base font-medium">
                               {subItem.name}
                             </p>
-                            <p className="text-sm text-gray-500 group-hover:text-secondary-color">
+                            <p className="text-sm text-gray-500 group-hover:text-secondary-color line-clamp-2">
                               {subItem.description}
                             </p>
                           </Link>

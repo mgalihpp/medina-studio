@@ -4,7 +4,7 @@ interface CourseTabProps {
   onClick: () => void;
 }
 
-interface courses {
+interface Kelas {
   id: string;
   title: string;
   subtitle: string;
@@ -14,9 +14,29 @@ interface courses {
   schedule: string;
   students: string;
   features: string[];
-  courses: {
-    title: string;
-    image: string;
-    duration: string;
-  }[];
+}
+
+interface Instructor {
+  name: string;
+  role: string;
+  image: string;
+}
+
+interface SyllabusItem {
+  title: string;
+  weeks: string;
+  topics: string[];
+}
+
+interface Course {
+  title: string;
+  duration: string;
+  schedule: string;
+  price: string;
+  description: string;
+  image: string;
+  instructors: Instructor[];
+  syllabus: SyllabusItem[];
+  facilities: string[];
+  benefits: string[];
 }

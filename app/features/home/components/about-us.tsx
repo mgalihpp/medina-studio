@@ -56,14 +56,6 @@ export function AboutUs() {
                 industri kreatif. Setiap siswa mendapatkan pendekatan personal
                 untuk mengasah potensi unik mereka.
               </p>
-              {/* <div className="flex items-center space-x-3">
-                <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <p className="text-gray-700 leading-relaxed text-base">
-                  Fasilitas modern: studio rias, ruang praktik, dan peralatan terbaru untuk pengalaman belajar optimal.
-                </p>
-              </div> */}
               <RippleButton asLink href="/tentang-kami">
                 Lebih lanjut
               </RippleButton>

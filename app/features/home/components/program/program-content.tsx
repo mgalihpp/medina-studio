@@ -12,11 +12,11 @@ const itemVariant = {
   }),
 };
 
-export function ProgramContent({ activeCourse }: { activeCourse: courses }) {
+export function ProgramContent({ kelas }: { kelas: Kelas }) {
   const navigate = useNavigate();
 
   const handleLebihDetailClick = () => {
-    navigate('/program-kursus');
+    navigate('/program-kursus#program-kursus');
   };
 
   return (
@@ -31,7 +31,7 @@ export function ProgramContent({ activeCourse }: { activeCourse: courses }) {
         custom={0}
         className="text-gray-700 leading-relaxed text-sm sm:text-base"
       >
-        {activeCourse.description}
+        {kelas.description}
       </motion.p>
 
       <motion.div
@@ -41,13 +41,13 @@ export function ProgramContent({ activeCourse }: { activeCourse: courses }) {
       >
         {/* Info Items */}
         {[
-          { icon: <Clock />, label: 'Durasi', value: activeCourse.duration },
+          { icon: <Clock />, label: 'Durasi', value: kelas.duration },
           {
             icon: <CalendarDays />,
             label: 'Jadwal',
-            value: activeCourse.schedule,
+            value: kelas.schedule,
           },
-          { icon: <Users />, label: 'Kapasitas', value: activeCourse.students },
+          { icon: <Users />, label: 'Kapasitas', value: kelas.students },
         ].map((item, idx) => (
           <div key={idx} className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
@@ -64,7 +64,7 @@ export function ProgramContent({ activeCourse }: { activeCourse: courses }) {
       <motion.div variants={itemVariant} custom={2}>
         <h4 className="sm:text-lg font-semibold mb-3">Fitur Program:</h4>
         <ul className="space-y-2">
-          {activeCourse.features.map((feature, index) => (
+          {kelas.features.map((feature, index) => (
             <motion.li
               key={index}
               variants={itemVariant}

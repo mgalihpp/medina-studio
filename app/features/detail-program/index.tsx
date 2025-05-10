@@ -11,112 +11,23 @@ import {
   CheckCircle,
   ChevronLeft,
 } from 'lucide-react';
-import { Badge } from '~/components/ui/badge';
 import { ScrollArea, ScrollBar } from '~/components/ui/scroll-area';
 import { Link, useParams } from 'react-router';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
 import { RippleButton } from '~/components/ripple-button';
+import { PROGRAM_KURSUS } from '~/constant/course';
+import { NotFound } from '~/components/layout/notfound';
 
 export function DetailProgram() {
-  const { kelas, program } = useParams();
+  const { program } = useParams();
 
-  const PROGRAM = {
-    title: 'Tata Rias Pengantin Tradisional',
-    duration: '6 bulan',
-    schedule: '3x pertemuan per minggu (Senin, Rabu, Jumat)',
-    price: 'Rp 12.500.000',
-    description:
-      'Pelajari teknik tata rias pengantin modern dan tradisional dari ahli kami. Kursus ini dirancang untuk membantu Anda menguasai berbagai gaya riasan pengantin, mulai dari natural hingga glamor.',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWXQgT21RE-I8mbez7QzmzEfoQjzlM-7_fJg&s',
-    instructors: [
-      {
-        name: 'Siti Rahayu',
-        role: 'Pengajar Senior Tata Rias',
-        image: '/img/mentor/widi.jpg',
-      },
-      {
-        name: 'Dewi Kartika',
-        role: 'Pakar Busana Tradisional',
-        image: '/img/mentor/siska.jpg',
-      },
-    ],
-    syllabus: [
-      {
-        title: 'Modul 1: Pengenalan Tata Rias Pengantin Tradisional',
-        weeks: 'Minggu 1-2',
-        topics: [
-          'Sejarah dan filosofi tata rias pengantin tradisional',
-          'Pengenalan alat dan bahan tata rias tradisional',
-          'Teknik dasar tata rias wajah untuk pengantin',
-        ],
-      },
-      {
-        title: 'Modul 2: Tata Rias Pengantin Jawa',
-        weeks: 'Minggu 3-6',
-        topics: [
-          'Tata rias pengantin Yogyakarta (Paes Ageng)',
-          'Tata rias pengantin Solo (Basahan dan Putri)',
-          'Teknik sanggul dan pemasangan aksesoris kepala',
-          'Busana dan perlengkapan pengantin Jawa',
-        ],
-      },
-      {
-        title: 'Modul 3: Tata Rias Pengantin Sunda',
-        weeks: 'Minggu 7-10',
-        topics: [
-          'Tata rias pengantin Sunda Siger',
-          'Tata rias pengantin Sunda Putri',
-          'Teknik draping dan pemakaian selendang',
-          'Aksesoris dan perhiasan khas Sunda',
-        ],
-      },
-      {
-        title: 'Modul 4: Tata Rias Pengantin Sumatera',
-        weeks: 'Minggu 11-14',
-        topics: [
-          'Tata rias pengantin Minangkabau',
-          'Tata rias pengantin Palembang',
-          'Teknik pemasangan sunting dan mahkota',
-          'Busana dan aksesoris khas Sumatera',
-        ],
-      },
-      {
-        title: 'Modul 5: Tata Rias Pengantin Indonesia Timur',
-        weeks: 'Minggu 15-18',
-        topics: [
-          'Tata rias pengantin Bali',
-          'Tata rias pengantin Sulawesi (Bugis dan Makassar)',
-          'Teknik pemasangan perhiasan dan aksesoris',
-          'Busana dan perlengkapan pengantin Indonesia Timur',
-        ],
-      },
-      {
-        title: 'Modul 6: Proyek Akhir dan Sertifikasi',
-        weeks: 'Minggu 19-24',
-        topics: [
-          'Praktik tata rias pengantin lengkap',
-          'Manajemen bisnis tata rias pengantin',
-          'Fotografi tata rias pengantin',
-          'Ujian sertifikasi dan proyek akhir',
-        ],
-      },
-    ],
-    facilities: [
-      'Studio rias profesional dengan pencahayaan standar industri',
-      'Alat dan bahan makeup premium',
-      'Koleksi busana tradisional lengkap',
-      'Akses ke perpustakaan referensi tata rias tradisional',
-      'Sesi foto profesional untuk portofolio',
-    ],
-    benefits: [
-      'Sertifikat profesi yang diakui secara nasional',
-      'Kesempatan magang di vendor pernikahan terkemuka',
-      'Jaringan dengan profesional industri',
-      'Bimbingan karir dan peluang kerja',
-      'Akses seumur hidup ke kelas penyegaran',
-    ],
-  };
+  const currentProgram = PROGRAM_KURSUS.find(
+    (item) => item.title.toLowerCase().replace(/\s+/g, '-') === program
+  );
+
+  if (!currentProgram) {
+    return <NotFound />;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 py-16 px-4 md:px-8">
@@ -130,7 +41,7 @@ export function DetailProgram() {
         </div>
 
         <div className="grid md:grid-cols-8 gap-8">
-          <div className="col-span-5 flex flex-col h-full">
+          <div className="col-span-5 md:col-span-4 lg:col-span-5 flex flex-col h-full">
             <Card className="p-8 border-none shadow-none outline-none">
               <div className="space-y-6">
                 <div>
@@ -139,14 +50,9 @@ export function DetailProgram() {
                       ?.replace(/-/g, ' ')
                       .replace(/\b\w/g, (char) => char.toUpperCase())}
                   </h1>
-                  {/* <Badge className="bg-main-light text-secondary-color py-1">
-                    {kelas
-                      ?.replace(/-/g, ' ')
-                      .replace(/\b\w/g, (char) => char.toUpperCase())}
-                  </Badge> */}
                 </div>
                 <p className="text-gray-600 text-sm sm:text-base">
-                  {PROGRAM.description}
+                  {currentProgram.description}
                 </p>
               </div>
 
@@ -180,7 +86,7 @@ export function DetailProgram() {
                       Pengajar Program
                     </h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                      {PROGRAM.instructors.map((instructor, index) => (
+                      {currentProgram.instructors.map((instructor, index) => (
                         <div
                           key={index}
                           className="flex items-center p-4 border rounded-lg"
@@ -212,7 +118,7 @@ export function DetailProgram() {
                       Kurikulum Program
                     </h2>
                     <div className="space-y-8">
-                      {PROGRAM.syllabus.map((module, index) => (
+                      {currentProgram.syllabus.map((module, index) => (
                         <div
                           key={index}
                           className="border-b pb-6 last:border-0"
@@ -271,7 +177,7 @@ export function DetailProgram() {
                   <TabsContent value="benefits" className="mt-6">
                     <h2 className="text-2xl font-bold mb-6">Manfaat Program</h2>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {PROGRAM.benefits.map((benefit, index) => (
+                      {currentProgram.benefits.map((benefit, index) => (
                         <li key={index} className="flex items-start">
                           <CheckCircle className="h-5 w-5 text-emerald-500 mr-2 flex-shrink-0 mt-0.5" />
                           <span className="text-sm">{benefit}</span>
@@ -282,26 +188,28 @@ export function DetailProgram() {
                 </Tabs>
               </div>
             </Card>
-
-            {/* <Card className="p-8 mt-8 h-full border-none shadow-none outline-none"></Card> */}
           </div>
 
-          <div className="space-y-6 col-span-4 md:col-span-3">
+          <div className="space-y-6 col-span-5 md:col-span-4 lg:col-span-3">
             <div className="md:sticky md:top-20">
               <Card className="overflow-hidden py-0 gap-0">
-                <AspectRatio ratio={16 / 9}>
+                <div className="relative h-60 w-full overflow-hidden">
                   <img
-                    src={PROGRAM.image}
-                    alt="Tata Rias Pengantin Program"
-                    className="h-full w-full object-cover"
+                    src={currentProgram.image || '/placeholder.svg'}
+                    alt={currentProgram.title}
+                    loading="lazy"
+                    decoding="async"
+                    height={500}
+                    width={800}
+                    className="object-cover w-full h-full"
                   />
-                </AspectRatio>
+                </div>
                 <div className="p-6 space-y-6">
                   <div className="space-y-4">
                     <div className="flex justify-between flex-wrap py-3 border-b">
                       <span className="font-medium">Durasi Program</span>
                       <span className="text-gray-600 text-sm">
-                        {PROGRAM.duration}
+                        {currentProgram.duration}
                       </span>
                     </div>
                     <div className="flex justify-between flex-wrap py-3 border-b">
@@ -319,7 +227,7 @@ export function DetailProgram() {
                     <div className="flex justify-between flex-wrap py-3 border-b">
                       <span className="font-medium">Biaya</span>
                       <span className="text-gray-600 text-sm">
-                        {PROGRAM.price}
+                        {currentProgram.price}
                       </span>
                     </div>
                   </div>
